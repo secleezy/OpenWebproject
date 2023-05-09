@@ -8,6 +8,7 @@
     text-align: center;
     padding: 5px;
     font-size: 13px;
+    z-index:1; /*css에서 z-index란, 요소가 겹쳤을때 무엇을 맨 위로 올릴지에 대한 속성임.[1이 작음]*/
 }
 
 a{
@@ -20,33 +21,26 @@ a:hover{
 }
 
 .logo {
-    display: inline;
-    padding: 80px;
-    font-size: 120px;
-    background-color: gray;
-
+    position: relative;
 }
 
 .menu{
-    width: 70%;
-    float:right;
-    text-align: right;
+    position: fixed;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    float: left;
     background-color: gray;
+    z-index:2; /*css에서 z-index란, 요소가 겹쳤을때 무엇을 맨 위로 올릴지에 대한 속성임.[1이 작음]*/
+    top:0px;
+    padding-top: 200px;
 }
 
 .menu_button{
     position: fixed;
     width: 50px;
     height: 50px;
-}
-
-.detail_menu{
-    background-color: red;
-    display: inline;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.logo_img{
-
+    background-color: white;
+    z-index:3; /*css에서 z-index란, 요소가 겹쳤을때 무엇을 맨 위로 올릴지에 대한 속성임.[1이 작음]*/   
+    top:0px;
 }

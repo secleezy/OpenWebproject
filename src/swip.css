@@ -1,19 +1,14 @@
 .swiper {
     width: 100%;
     height: 100%;
+    font-size: 13px;
+    z-index:1; /*css에서 z-index란, 요소가 겹쳤을때 무엇을 맨 위로 올릴지에 대한 속성임.[1이 작음]*/
   }
   
   .swiper-slide {
     text-align: center;
     /* Center slide text vertically */
-    display: flex;
+
     justify-content: center;
     align-items: center;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }

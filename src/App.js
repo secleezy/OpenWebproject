@@ -7,16 +7,23 @@ import { Swiper, SwiperSlide } from "swiper/react"; //swiper
 import "swiper/css"; //swiper
 import "./swip.css"; //swiper
 import { Autoplay, Pagination, Navigation } from "swiper"; //swiper 자동 스외이프
-
-
+import React, { useState } from 'react'; //리액트 동적변수 사용
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; //페이지이동 import
 /////////import 부분
+import All from './all';
+import BestProduct from './bestproduct';
 
+import Login from './login';
+import Join from './join';
+import Mypage from './mypage';
+import AboutUs from './aboutus';
+import StockList from './stocklist';
+import Community from './community';
+////////page페이지이동 import부분
 
-
-function Top(props){
+function Top(props){ //스와이프 되는, 첫 구매시 쿠폰
   return <top>
-  <div class="top_title">
-
+    <div class="ssss">
     {/* 글자가 움직여요! */}
     <Swiper
         spaceBetween={30} // 슬라이드 사이 여백
@@ -34,73 +41,80 @@ function Top(props){
         <SwiperSlide>가입시 첫구매 지원금 3,000원 적립</SwiperSlide>
       </Swiper>
     {/* 글자가 움직여요! */}
-
-  </div>
+    </div>
   </top>
 } 
 
-function Menu(props){
 
-  return <menubar>
-      <button type="button" class="menu_button" onClick={function}> {/*메뉴 버튼*/}
-      </button>
-  </menubar>
+function Menu(props) { //토글메뉴부분
+  // 토글메뉴는 닫아두기 위해 초기값을 false로 설정해두었다.
+  const [isCheck, setCheck] = useState(false);
 
+  return (
+    <>
+      <div>
+        <button class="menu_button"
+          onClick={() => {
+            // setCheck로 state값을 변경해주자.
+            // e로 상태값을 받아왔다. 클릭시 상태값은 !상태값이므로 값이 반전된다 false -> true
+            setCheck((e) => !e);
+          }}
+        >
+        {isCheck ? "+" : "-"}
+        </button>
+      </div>
+      
+      {isCheck && (
+        <div class="menu">  
+          <ul>
+          <hr></hr>
+          <li>LOGIN</li>
+          <li>JOIN</li>
+          <li>MY PAGE</li>
+          <li>ABOUT US</li>
+          <li>STOCK LIST</li>
+          <li>COMMUNITY</li>
+        </ul>
+        </div>
+      )}
+    </>
+  );
 }
 
-
-function Header(props){ //헤더부분입니다.
+function Header(props){ //헤더부분입니다 [미사용]
   return <header>
-  <div class="head">
-  <h1 class="logo"><a href="#">{props.title}</a></h1>
 
-  
-  <div class="menu">
-  <div class="detail_menu">a</div>
-  <div class="detail_menu">b</div>
-  <div class="detail_menu">c</div>
-  </div>
-  
-  </div>
   </header>
 } 
-// 컴포넌트(사용자 정의태그)는 대문자로
-//REACT
 
 function Main(props){ //메인 부분입니다.
-
 return <main>
-<div class="logo_img">
+<div class="logo">
   <img src="images/logo.jpg" alt="BigCo Inc. logo"/>
 </div>
 </main>
 }
-//list
 
 /////////////////////////////////////////////////////////////////////////////////////
 
 function App() { //App, 구현부분입니다.
   return (
-
-
     /////////실코딩부분실코딩부분실코딩부분실코딩부분실코딩부분실코딩부분///////////
+
     <div>
 
       <Top></Top> {/*첫 구입시 쿠폰.....*/}
+      <Menu>       
+        <li><Link to="/all">ALL</Link></li>
+        <li><Link to="/bestproduct">BEST</Link></li>
+      </Menu> {/*토글메뉴임*/}
 
-      <Menu></Menu>
-
-
-      <Header title="65"></Header>
+      {/*보류보류보류..... <Header></Header>  */}
 
 
       <Main></Main>
-
       <Button variant="primary">Primary</Button>  //부트스트랩 버튼test
-
-
-
-
+      
     </div>
   );
 }
