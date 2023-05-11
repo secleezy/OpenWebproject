@@ -1,7 +1,7 @@
 import logo from './logo.svg'; //리액트 로고
 import './App.css'; //리액트 css 가져오기
 import 'bootstrap/dist/css/bootstrap.min.css'; //부트스트랩 css 가져오기
-import "./UserInterface.css"; //내가만든 css 가져오기
+import "./pages/UserInterface.css"; //내가만든 css 가져오기
 import Button from 'react-bootstrap/Button'; //부트스트랩 버튼
 import { Swiper, SwiperSlide } from "swiper/react"; //swiper
 import "swiper/css"; //swiper
@@ -10,15 +10,19 @@ import { Autoplay, Pagination, Navigation } from "swiper"; //swiper 자동 스�
 import React, { useState } from 'react'; //리액트 동적변수 사용
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; //페이지이동 import
 /////////import 부분
-import All from './all';
-import BestProduct from './bestproduct';
+import Sidebar from "./Sidebar";
 
-import Login from './login';
-import Join from './join';
-import Mypage from './mypage';
-import AboutUs from './aboutus';
-import StockList from './stocklist';
-import Community from './community';
+import Main from "./pages/Main";
+
+import All from "./pages/all";
+import Bestproduct from "./pages/bestproduct";
+
+import Login from "./pages/login";
+import Join from "./pages/join";
+import Mypage from "./pages/mypage";
+import Aboutus from "./pages/aboutus";
+import Stocklist from "./pages/stocklist";
+import Community from "./pages/community";
 ////////page페이지이동 import부분
 
 function Top(props){ //스와이프 되는, 첫 구매시 쿠폰
@@ -46,75 +50,34 @@ function Top(props){ //스와이프 되는, 첫 구매시 쿠폰
 } 
 
 
-function Menu(props) { //토글메뉴부분
-  // 토글메뉴는 닫아두기 위해 초기값을 false로 설정해두었다.
-  const [isCheck, setCheck] = useState(false);
-
-  return (
-    <>
-      <div>
-        <button class="menu_button"
-          onClick={() => {
-            // setCheck로 state값을 변경해주자.
-            // e로 상태값을 받아왔다. 클릭시 상태값은 !상태값이므로 값이 반전된다 false -> true
-            setCheck((e) => !e);
-          }}
-        >
-        {isCheck ? "+" : "-"}
-        </button>
-      </div>
-      
-      {isCheck && (
-        <div class="menu">  
-          <ul>
-          <hr></hr>
-          <li>LOGIN</li>
-          <li>JOIN</li>
-          <li>MY PAGE</li>
-          <li>ABOUT US</li>
-          <li>STOCK LIST</li>
-          <li>COMMUNITY</li>
-        </ul>
-        </div>
-      )}
-    </>
-  );
-}
-
-function Header(props){ //헤더부분입니다 [미사용]
-  return <header>
-
-  </header>
-} 
-
-function Main(props){ //메인 부분입니다.
-return <main>
-<div class="logo">
-  <img src="images/logo.jpg" alt="BigCo Inc. logo"/>
-</div>
-</main>
-}
-
 /////////////////////////////////////////////////////////////////////////////////////
 
 function App() { //App, 구현부분입니다.
   return (
-    /////////실코딩부분실코딩부분실코딩부분실코딩부분실코딩부분실코딩부분///////////
+        /////////실코딩부분실코딩부분실코딩부분실코딩부분실코딩부분실코딩부분///////////
 
-    <div>
+    <div className="App">
+    <BrowserRouter>
+    <Top></Top>
+    <Sidebar></Sidebar>
+    {/*화면이동 페이지*/}
+    <Routes>
+    <Route path="/" element={<Main />}></Route>
+    <Route path="/all" element={<All />}></Route>
+    <Route path="/bestproduct" element={<Bestproduct />}></Route>
 
-      <Top></Top> {/*첫 구입시 쿠폰.....*/}
-      <Menu>       
-        <li><Link to="/all">ALL</Link></li>
-        <li><Link to="/bestproduct">BEST</Link></li>
-      </Menu> {/*토글메뉴임*/}
+    <Route path="/login" element={<Login />}></Route>
+    <Route path="/join" element={<Join />}></Route>
+    <Route path="/mypage" element={<Mypage />}></Route>
+    <Route path="/aboutus" element={<Aboutus />}></Route>
+    <Route path="/stocklist" element={<Stocklist />}></Route>
+    <Route path="/community" element={<Community />}></Route>
+    </Routes>
+    {/*화면이동 페이지*/}
 
-      {/*보류보류보류..... <Header></Header>  */}
 
 
-      <Main></Main>
-      <Button variant="primary">Primary</Button>  //부트스트랩 버튼test
-      
+    </BrowserRouter>
     </div>
   );
 }
