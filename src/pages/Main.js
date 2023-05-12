@@ -7,7 +7,7 @@ export default function All() {
   return (
     <div className="main">
       <div class="logo">
-        <img src="images/logo.jpg" alt="BigCo Inc. logo"/>
+        <img src="images/logo.png" alt="BigCo Inc. logo"/>
       </div>
       </div>
   );

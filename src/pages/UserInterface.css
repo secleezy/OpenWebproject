@@ -1,64 +1,53 @@
-*{
-    background-color: black;
-    color:white;
-}
-
-.top_title{
-    display: block;
-    text-align: center;
-    padding: 5px;
-    font-size: 13px;
-    z-index:1; /*css에서 z-index란, 요소가 겹쳤을때 무엇을 맨 위로 올릴지에 대한 속성임.[1이 작음]*/
-}
-
-a{
-    color:white;
-    text-decoration: none;
+*{ /*모든스타일*/
+    background-color: white;
+    color:gray;
     font-family: 'Times New Roman', Times, serif;
 }
-a:hover{
+
+a{ /*링크스타일*/
+    color:white;
+    text-decoration: none;
+}
+a:hover{/*링크 hover스타일*/
     color:white;
 }
 
-.logo {
-    position: relative;
-}
-
-.menu{
-    position: fixed;
-    left: 0;
-    width: 20%;
-    height: 100%;
-    float: left;
-    background-color: gray;
-    z-index:2; /*css에서 z-index란, 요소가 겹쳤을때 무엇을 맨 위로 올릴지에 대한 속성임.[1이 작음]*/
-    top:0px;
-    padding-top: 200px;
-}
-
-.menu_button{
+.menu_button{ /*메뉴 토글버튼*/
     position: fixed;
     left: 0;
     width: 50px;
     height: 50px;
     background-color: white;
-    z-index:8; /*css에서 z-index란, 요소가 겹쳤을때 무엇을 맨 위로 올릴지에 대한 속성임.[1이 작음]*/   
-    top:20px;
+    z-index:3; /*css에서 z-index란, 요소가 겹쳤을때 무엇을 맨 위로 올릴지에 대한 속성임.[1이 작음]*/   
+
     color: black;
 }
 
-.sidebar{
-    background-color: antiquewhite;
+.sidebar{ /*메뉴*/
+    
+    background-color: black;
     width: 20%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     left: 0;
     padding-top: 10%;
-    z-index:5;
+    z-index:2;
 }
 
-.sidebar-item{
+.sidebar-item{ /*메뉴 각 요소 스타일*/
+    background-color: black;
+    color: white;
     font-size: 20px;
     margin-top: 25px;
     margin-bottom: 25px;
+}
+
+.aboutus{
+    width: 100%;
+    margin: auto;
+}
+
+.footer{
+    background-color: darkolivegreen;
+    color: black;
 }

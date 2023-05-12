@@ -31,7 +31,7 @@ const [isCheck, setCheck] = useState(false);
             setCheck((e) => !e);
           }}
         >
-        {isCheck ? "+" : "-"}
+        {isCheck ? "+" : "-"} {/*토글메뉴*/}
         </button>
       </div>
       
