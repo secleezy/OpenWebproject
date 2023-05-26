@@ -19,10 +19,13 @@ a:hover {
 .menu_button {
     /*메뉴 토글버튼*/
     position: fixed;
-    left: 0;
+    margin-top: 3px;
+    left: 5px;
     width: 50px;
     height: 50px;
-    background-color: white;
+    background-image: url( "../images/icon/menu.png" );
+    background-size: cover;
+    border: none;
     z-index: 3;
     /*css에서 z-index란, 요소가 겹쳤을때 무엇을 맨 위로 올릴지에 대한 속성임.[1이 작음]*/
 
