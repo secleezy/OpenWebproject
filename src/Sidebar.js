@@ -35,8 +35,9 @@ const [isCheck, setCheck] = useState(false);
         </button>
       </div>
       
-      {isCheck && (
-      <div className="sidebar">
+
+      {isCheck &&(
+      <div className="sidebar" style={{width: 400}}>
       {menus.map((menu, index) => {
         return (
           <Link to={menu.path} key={index}>
@@ -47,7 +48,7 @@ const [isCheck, setCheck] = useState(false);
         );
       })}
       </div>
-      )}
+      ) ||  <div className="sidebar" style={{width: 0}}></div> }
     </>
   );
 }
