@@ -1,23 +1,23 @@
 * {
-    /*모든스타일*/
+    /*모든?��????��*/
     background-color: white;
     color: gray;
     font-family: 'Times New Roman', Times, serif;
 }
 
 a {
-    /*링크스타일*/
+    /*링크?��????��*/
     color: white;
     text-decoration: none;
 }
 
 a:hover {
-    /*링크 hover스타일*/
+    /*링크 hover?��????��*/
     color: white;
 }
 
 .menu_button {
-    /*메뉴 토글버튼*/
+    /*메뉴 ?���?버튼*/
     position: fixed;
     margin-top: 3px;
     left: 5px;
@@ -28,7 +28,7 @@ a:hover {
     background-size: cover;
     border: none;
     z-index: 3;
-    /*css에서 z-index란, 요소가 겹쳤을때 무엇을 맨 위로 올릴지에 대한 속성임.[1이 작음]*/
+    /*css?��?�� z-index???, ?��?���? 겹쳤?��?�� 무엇?�� �? ?���? ?��릴�???�� ????�� ?��?��?��.[1?�� ?��?��]*/
 
     color: black;
 }
@@ -57,7 +57,7 @@ a:hover {
 }
 
 .sidebar-item {
-    /*메뉴 각 요소 스타일*/
+    /*메뉴 �? ?��?�� ?��????��*/
     background-color: black;
     color: white;
     font-size: 20px;
@@ -76,11 +76,10 @@ a:hover {
 }
 
 .footer {
-    position: absolute;
     width: 100%;
-    background-color: darkolivegreen;
-    color: black;
-    bottom: 0;
+    border:  solid black 30px;
+    background-color: black;
+    margin-top: 100px;
 }
 
 /* UserInterface.css */
@@ -159,3 +158,19 @@ a:hover {
 }
 
 /* login.js */
+
+
+
+/* aboutus.js */
+.About-div{
+    height: 1000px;
+}
+
+/* Footer.js*/
+#f-grid, .bi{
+    background-color: black;
+}
+.f-text a, .f-text {
+    background-color: black;
+    text-align: left;
+}
