@@ -11,8 +11,7 @@ export default function Community() {
     <div>
       <div class="board">
 
-      <img src="images/logo.png" alt="BigCo Inc. logo" style={{width: '200px', margin: '30px', marginBottom: '40px'}}/>
-      <br/>
+      <Link to='/'><img src="images/logo.png" alt="BigCo Inc. logo" style={{width: '200px', margin: '30px', marginBottom: '40px'}}/></Link><br/>
 
       <table style={{width: '60%', display: 'inline-block', fontWeight: '800', height: '35px'}}>
         <td style={{width: '200px'}}><Link to='/community' style={{color: "#000033"}}>Notice</Link></td>

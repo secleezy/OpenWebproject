@@ -1,6 +1,6 @@
 import "./UserInterface.css"; //내가만든 css 가져오기
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 export default function Mypage() {
   const movePage = useNavigate();
 
@@ -8,9 +8,8 @@ export default function Mypage() {
      movePage('/user/all');
    }
   return (
-    <div className="mypage">
-      마이페이지 입니다.
-      <button onClick={gohome}>홈으로이동</button>
+    <div>
+<Link to='/'><img src="images/logo.png" alt="BigCo Inc. logo" style={{width: '200px', margin: '30px', marginBottom: '40px'}}/></Link>
       </div>
   );
 }

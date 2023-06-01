@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./UserInterface.css";
-
+import { Link } from "react-router-dom";
 // Temp users data
 const users = [
     { id: 'user1', password: 'password1' },
@@ -27,6 +27,8 @@ export function LoginForm() {
 
     return (
         <div className="login">
+            <Link to='/'><img src="images/logo.png" alt="BigCo Inc. logo" style={{width: '200px', margin: '30px', marginBottom: '40px'}}/></Link>
+
             <form onSubmit={handleSubmit}>
                 <h2>Login</h2>
 
