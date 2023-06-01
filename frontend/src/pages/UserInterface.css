@@ -1,19 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
 * {
     /*모든?��????��*/
     background-color: white;
     color: gray;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 a {
     /*링크?��????��*/
-    color: white;
+    color: gray;
     text-decoration: none;
 }
 
 a:hover {
     /*링크 hover?��????��*/
-    color: white;
+    color: black;
 }
 
 .menu_button {

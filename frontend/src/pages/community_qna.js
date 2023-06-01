@@ -1,12 +1,10 @@
 import "./UserInterface.css"; //내가만든 css 가져오기
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-export default function Community() {
+
+export default function Community_qna() {
   const movePage = useNavigate();
 
-  function gohome(){
-     movePage('/user/all');
-   }
   return (
     <div>
       <div class="board">
@@ -15,8 +13,8 @@ export default function Community() {
       <br/>
 
       <table style={{width: '60%', display: 'inline-block', fontWeight: '800', height: '35px'}}>
-        <td style={{width: '200px'}}><Link to='/community' style={{color: "#000033"}}>Notice</Link></td>
-        <td style={{width: '200px'}}><Link to='/community_qna'>QnA</Link></td>
+        <td style={{width: '200px'}}><Link to='/community'>Notice</Link></td>
+        <td style={{width: '200px'}}><Link to='/community_qna'  style={{color: "#000033"}}>QnA</Link></td>
       </table>
       <table class="killmyself" style={{width: '60%', display: 'inline-block'}}>
         <tr style={{borderTop: '1px solid gray', borderBottom: '1px solid gray', height: '40px', fontWeight: '800'}}>
@@ -28,7 +26,7 @@ export default function Community() {
 
         <tr style={{height: '40px'}}>
           <td style={{width: '150px'}}><Link to='/login'>1</Link></td>
-          <td style={{width: '700px'}}>hi</td>
+          <td style={{width: '700px'}}>hi it's qnas</td>
           <td style={{width: '150px'}}>jiyeon</td>
           <td style={{width: '150px'}}>230601</td>
         </tr>
