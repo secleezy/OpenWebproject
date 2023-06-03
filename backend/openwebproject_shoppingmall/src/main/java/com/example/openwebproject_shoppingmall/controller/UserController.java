@@ -1,50 +1,27 @@
 package com.example.openwebproject_shoppingmall.controller;
 
 import com.example.openwebproject_shoppingmall.model.User;
-import org.springframework.web.bind.annotation.*;
+import com.example.openwebproject_shoppingmall.service.UserService;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
 
-    private List<User> users = new ArrayList<>();
+    private final UserService userService;
 
-    @PostMapping
-    public User createUser(@RequestBody User newUser) {
-        users.add(newUser);
-        return newUser;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
-    @GetMapping
-    public List<User> getUsers() {
-        return users;
+    @PostMapping("/signup")
+    public User signup(@RequestBody User user) {
+        return userService.signup(user.getId(), user.getName(), user.getEmail(), user.getPassword());
     }
 
-    @GetMapping("/{id}")
-    public User getUser(@PathVariable("id") int id) {
-        return users.stream()
-                .filter(user -> user.getId() == id)
-                .findFirst()
-                .orElse(null);
-    }
-
-    @PutMapping("/{id}")
-    public User updateUser(@PathVariable("id") int id, @RequestBody User updatedUser) {
-        users.stream()
-                .filter(user -> user.getId() == id)
-                .forEach(user -> {
-                    user.setName(updatedUser.getName());
-                    user.setEmail(updatedUser.getEmail());
-                });
-        return updatedUser;
-    }
-
-    @DeleteMapping("/{id}")
-    public String deleteUser(@PathVariable("id") int id) {
-        users.removeIf(user -> user.getId() == id);
-        return "User id " + id + " has been removed.";
+    @PostMapping("/signin")
+    public User signin(@RequestBody User user) {
+        return userService.signin(user.getId(), user.getPassword());
     }
 }
