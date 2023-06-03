@@ -24,7 +24,11 @@ import Mypage from "./pages/mypage";
 import Aboutus from "./pages/aboutus";
 import Stocklist from "./pages/stocklist";
 import Community from "./pages/community";
+
+import Community_qna from "./pages/community_qna";
+import SuccessJoin from './pages/successjoin';
 ////////page페이지이동 import부분
+
 
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -52,6 +56,8 @@ function App() { //App, 구현부분입니다.
     <Route path="/aboutus" element={<Aboutus />}></Route>
     <Route path="/stocklist" element={<Stocklist />}></Route>
     <Route path="/community" element={<Community />}></Route>
+    <Route path="/community_qna" element={<Community_qna />}></Route>
+    <Route path="/successjoin" element={<SuccessJoin />}></Route>
     </Routes>
     {/*화면이동 페이지*/}
 

@@ -12,7 +12,7 @@ const [isCheck, setCheck] = useState(false);
   const menus = [
     { name: "메인", path: "/" },
     { name: "ALL", path: "/all" },
-    { name: "BEST PRODUCT", path: "/bestproduct" },
+    { name: "CUSTOM PRODUCT", path: "/bestproduct" },
 
     { name: "LOGIN", path: "/login" },
     { name: "JOIN", path: "/join" },

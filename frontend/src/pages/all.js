@@ -1,6 +1,6 @@
 import React from 'react';
 import "./UserInterface.css"; // Import your CSS
-
+import { Link } from "react-router-dom";
 export default function All() {
     const imgRoute = "./images/item/";
 
@@ -30,15 +30,28 @@ export default function All() {
 
     return (
         <div className="all">
-            <h1>All Products</h1>
-            <div className="product-grid">
-                {products.map((product) => (
-                    <div className="product-item" key={product.id}>
-                        <img src={imgRoute + product.category + "/" + product.id + ".png"} alt={product.name} />
-                        <h3>{product.name}</h3>
-                    </div>
-                ))}
-            </div>
+        <Link to='/'><img src="images/logo.png" alt="BigCo Inc. logo" style={{width: '200px', margin: '30px', marginBottom: '40px'}}/></Link>
+        
+        <br/>
+        <b>All Products</b><br/>
+        <table style={{width: '60%', display: 'inline-block', height: '35px', textAlign: 'center'}}><br/>
+        
+        <span style={{width:'100px', display:'inline-block'}}><Link to='/'>Necklace</Link></span>
+        <span style={{width:'100px', display:'inline-block'}}><Link to='/'>Ring</Link></span>
+        <span style={{width:'100px', display:'inline-block'}}><Link to='/'>Earring</Link></span>
+
+        </table>
+        <div className="product-grid">
+            {products.map((product) => (
+                <div className="product-item" key={product.id}>
+                    <img src={imgRoute + product.category + "/" + product.id + ".png"} alt={product.name} />
+                    <p>{product.name}</p>
+                    <p>$5</p>
+                    <p>색</p>
+                    <p>당일출고</p>
+                </div>
+            ))}
+        </div>
         </div>
     );
 }
