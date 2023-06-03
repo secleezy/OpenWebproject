@@ -11,9 +11,7 @@ export default function All() {
     <div className="main">
       <div class="logo">
         {/*       */}
-        <img src="images/logo.png" alt="BigCo Inc. logo"/>
-
-
+        <Link to='/'><img src="images/logo.png" alt="BigCo Inc. logo" style={{width: '200px', margin: '30px', marginBottom: '40px'}}/></Link>
 
 
 
