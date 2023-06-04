@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 export default function Join() {
+    const API_URL = 'http://localhost:8080/api/users/';
+
     const [email, setEmail] = useState("");
     const [pw, setpw] = useState("");
     const [verifypw, setverifypw] = useState("");
@@ -22,30 +24,40 @@ export default function Join() {
 
     const [termsText, setTermsText] = useState("");
     const [privacyText, setPrivacyText] = useState("");
-
     let realemail = "";
 
     let checkedID = false; //id 중복체크함?
 
 
     const checkIDverify = () => {
-        const idRegExp = /^(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]|.*[0-9]).{8,16}$/
+        const idRegExp = /^(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]|.*[0-9]).{4,16}$/;
         if (!idRegExp.test(id)) {
-            alert("Please check ID.");
+            alert("Please make id in the correct format.");
+            return;
         }
 
-        else {
-            if (false/*사용 불가능 아이디일경우*/) {
-                alert("This username is already in use.");
-            }
-            else {
-                alert("This ID is available.");
-                setDisable(true);
-                setstylechange('lightgray');
-            }
-
-        }
+        fetch(`${API_URL}${id}`)
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                if (data == "null") {
+                    alert("This ID is available.");
+                    setDisable(true);
+                    setstylechange('lightgray');
+                }
+                else {
+                    alert("This ID is not available.");
+                    setDisable(false);
+                    setstylechange('red');
+                }
+            })
+            .catch(error => {
+                alert("Server Error.");
+                setstylechange('red');
+            });
     }
+
+
 
     const onJoin = () => {
         realemail = email + "@" + emaildomain;
@@ -103,8 +115,21 @@ export default function Join() {
             return;
         }
 
+        fetch(API_URL + "signup", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id: id,
+                name: name,
+                email: realemail,
+                password: pw
+            })
+        })
+
         // At this point all the checks have passed, we can proceed with the successful operation.
-        navigate('/successjoin')
+        navigate('/successjoin', { state: { id: id, email: realemail } });
     };
 
 
@@ -187,8 +212,6 @@ export default function Join() {
 
 
     return (
-
-
         <div>
             <Link to='/'><img src="images/logo.png" alt="BigCo Inc. logo" style={{ width: '200px', margin: '30px', marginBottom: '40px' }} /></Link><br />
 

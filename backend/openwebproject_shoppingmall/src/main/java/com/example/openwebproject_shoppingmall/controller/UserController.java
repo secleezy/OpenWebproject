@@ -5,6 +5,8 @@ import com.example.openwebproject_shoppingmall.service.UserService;
 
 import jakarta.servlet.http.HttpServletRequest;
 
+import java.util.Optional;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,6 +35,11 @@ public class UserController {
     public ResponseEntity<?> logout(HttpServletRequest request) {
         request.getSession().invalidate();
         return ResponseEntity.ok().body("You has been logged out");
+    }
+
+    @GetMapping("/{id}")
+    public Optional<User> getUserById(@PathVariable String id) {
+        return userService.getUserById(id);
     }
 
 }

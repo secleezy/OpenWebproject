@@ -2,24 +2,21 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./UserInterface.css";
 import { Link } from "react-router-dom";
-// Temp users data
-const users = [
-    { id: 'user1', password: 'password1' },
-    { id: 'user2', password: 'password2' },
-];
+
 
 export function LoginForm() {
+    const API_URL = 'http://localhost:8080/api/users/';
+
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
 
-    const API_URL = 'http://localhost:8080/api/users/signin';
     const handleSubmit = event => {
         event.preventDefault();
 
         // Post data to the server
-        fetch(API_URL, {
+        fetch(API_URL + "signin", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
