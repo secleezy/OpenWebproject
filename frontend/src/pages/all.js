@@ -28,6 +28,11 @@ export default function All() {
         }
     ];
 
+
+    const showaddstocklist = () =>
+    {
+
+    }
     return (
         <div className="all">
         <Link to='/'><img src="images/logo.png" alt="BigCo Inc. logo" style={{width: '200px', margin: '30px', marginBottom: '40px'}}/></Link>
@@ -44,7 +49,14 @@ export default function All() {
         <div className="product-grid">
             {products.map((product) => (
                 <div className="product-item" key={product.id}>
-                    <Link to='/itemdetail'><img src={imgRoute + product.category + "/" + product.id + ".png"} alt={product.name} /></Link>
+                    <Link to='/itemdetail'>
+                        <div>
+
+                        <img src={imgRoute + product.category + "/" + product.id + ".png"} alt={product.name} onmouseenter={showaddstocklist}>
+                        </img>
+                        
+                        </div>
+                    </Link>
                     <Link to='/itemdetail'><p>{product.name}</p></Link>
                     <p>$5</p>
                     <p>색</p>
