@@ -179,6 +179,7 @@ button {
     top:35px;
     background-color: red;
 }
+
 /* UserInterface.css */
 
 
@@ -189,7 +190,7 @@ button {
 .all .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 25px;
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 3%;

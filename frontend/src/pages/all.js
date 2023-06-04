@@ -13,18 +13,27 @@ export default function All() {
         {
             id: 2,
             name: "product2",
-            category: "bless",
+            category: "dream",
         },
         {
             id: 3,
             name: "product3",
-            category: "bless",
+            category: "cupid",
         },
-
         {
             id: 4,
             name: "product4",
-            category: "bless",
+            category: "conch",
+        },
+        {
+            id: 5,
+            name: "product5",
+            category: "flog",
+        },
+        {
+            id: 6,
+            name: "product6",
+            category: "heart"
         }
     ];
 
@@ -52,7 +61,7 @@ export default function All() {
                     <Link to='/itemdetail'>
                         <div>
 
-                        <img src={imgRoute + product.category + "/" + product.id + ".png"} alt={product.name} onmouseenter={showaddstocklist}>
+                        <img style={{height:'500px'}} src={imgRoute + product.category + "/" + 1 + ".png"} alt={product.name} onmouseenter={showaddstocklist}>
                         </img>
                         
                         </div>
