@@ -1,0 +1,49 @@
+1.  Purposes of Collection and Use of Personal Information
+
+A.  Contract fulfillment obligated by provision of services and settlement of payment for the services provided
+
+Supply of content, purchase and payment, delivery of goods or billing statements and others, user authentication for financial transactions and financial services
+
+B.  Member management
+
+User authentication to access members-only service, identity verification, prevention of unauthorized or illegal use, membership subscription check, validation of user age, confirmation of consent/agreement from legal representative for users under the age of 14, handling of complaints and civil affairs, delivery of notices
+
+
+
+2.  Types of Personal Information Collected : user ID, password, E-mail address, personal information of legal representative for users under the age of 14
+
+3. Duration of Retention and Use of Personal Information
+
+As a general rule, once the personal data has fulfilled the purposes for which they were collected, they will be discarded without delay. However, it shall be retained for a specified period of time due to the reasons mentioned below.
+
+A.  Duration of Retention and Use of Personal Information
+
+Retention pursuant to prevention of illegal transaction and internal shopping mall: OO years
+
+B.  Retention pursuant to applicable laws
+
+o Records on contracts or withdrawal of offers and the like:
+
+- Reasons of retention: Act on Consumer Protection in the Electronic Commerce Transactions, Etc.
+
+- Retention Period : 5 years
+
+o Records on payment settlement and supply of goods etc.
+
+- Reasons of retention: Act on Consumer Protection in the Electronic Commerce Transactions, Etc
+
+- Retention Period : 5 years
+
+o Records on processing of customer disputes and complaints
+
+- Reasons of retention: Act on Consumer Protection in the Electronic Commerce Transactions, Etc
+
+- Retention Period : 3 years
+
+o Log records
+
+- Reasons of retention: Communication Privacy Act
+
+- Retention Period : 3 months
+
+※ If you do not accept these terms, you will not be able to create an account with us.
