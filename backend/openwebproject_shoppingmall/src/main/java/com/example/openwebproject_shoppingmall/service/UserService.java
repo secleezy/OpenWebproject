@@ -2,6 +2,8 @@ package com.example.openwebproject_shoppingmall.service;
 
 import java.util.Optional;
 
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -29,14 +31,17 @@ public class UserService {
     public User signin(String id, String password) {
         Optional<User> userOptional = userRepository.findById(id);
 
-        if (userOptional.isPresent()) {
-            User user = userOptional.get();
-            if (new BCryptPasswordEncoder().matches(password, user.getPassword())) {
-                return user;
-            }
+        if (!userOptional.isPresent()) {
+            throw new UsernameNotFoundException("User not found with id: " + id);
         }
 
-        return null;
+        User user = userOptional.get();
+
+        if (!new BCryptPasswordEncoder().matches(password, user.getPassword())) {
+            throw new BadCredentialsException("Invalid password");
+        }
+
+        return user;
     }
 
 }
