@@ -12,6 +12,7 @@ import $ from 'jquery'; //제이쿼리 import
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
+import UserIcon from './UserIcon';
 
 import Main from "./pages/Main";
 
@@ -44,6 +45,7 @@ function App() { //App, 구현부분입니다.
     <div className="App" >
     <BrowserRouter>
     <Header></Header>
+    <UserIcon></UserIcon>
     <Sidebar></Sidebar>
     {/*화면이동 페이지*/}
     <Routes>

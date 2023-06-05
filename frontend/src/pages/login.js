@@ -2,25 +2,26 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./UserInterface.css";
 import { Link } from "react-router-dom";
-// Temp users data
-const users = [
-    { id: 'user1', password: 'password1' },
-    { id: 'user2', password: 'password2' },
-];
+import { useCookies } from "react-cookie";
+
+
 
 export function LoginForm() {
+    const API_URL = '/api/users/';
+
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
+    const [cookies, setCookie, removeCookie] = useCookies(['id']);
     const navigate = useNavigate();
 
 
-    const API_URL = 'http://localhost:8080/api/users/signin';
     const handleSubmit = event => {
         event.preventDefault();
 
         // Post data to the server
-        fetch(API_URL, {
+        fetch(API_URL + "signin", {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -33,6 +34,7 @@ export function LoginForm() {
             .then(data => {
                 if (data.id) {
                     console.log(`Id: ${id}, Password: ${password}`);
+                    setCookie('id', id, { path: '/', maxAge: 3600 });
                     navigate('/');
                 } else {
                     alert('아이디 / 비밀번호를 다시 확인하세요');

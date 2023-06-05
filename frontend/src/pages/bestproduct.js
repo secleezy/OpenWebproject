@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 export default function Bestproduct() {
 
-  return (
-    <div>
+    return (
+        <div>
 
-<Link to='/'><img src="images/logo.png" alt="BigCo Inc. logo" style={{width: '200px', margin: '30px', marginBottom: '40px'}}/></Link>
-      </div>
-  );
+            <Link to='/'><img src="images/logo.png" alt="BigCo Inc. logo" style={{ width: '200px', margin: '30px', marginBottom: '40px' }} /></Link>
+        </div>
+    );
 }

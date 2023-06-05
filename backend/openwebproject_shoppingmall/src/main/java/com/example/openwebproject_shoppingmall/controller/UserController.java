@@ -4,11 +4,13 @@ import com.example.openwebproject_shoppingmall.model.User;
 import com.example.openwebproject_shoppingmall.service.UserService;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.util.Optional;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
@@ -25,14 +27,19 @@ public class UserController {
     }
 
     @PostMapping("/signin")
-    public User signin(@RequestBody User user) {
-        return userService.signin(user.getId(), user.getPassword());
+    public User signin(@RequestBody User user, HttpServletResponse response) {
+        return userService.signin(user.getId(), user.getPassword(), response);
     }
 
     @PostMapping("/logout")
     public ResponseEntity<?> logout(HttpServletRequest request) {
         request.getSession().invalidate();
         return ResponseEntity.ok().body("You has been logged out");
+    }
+
+    @GetMapping("/{id}")
+    public Optional<User> getUserById(@PathVariable String id) {
+        return userService.getUserById(id);
     }
 
 }

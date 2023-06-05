@@ -7,7 +7,6 @@ import Carousel from 'react-material-ui-carousel';
 import React, { useState, useEffect } from 'react';
 
 export default function All() {
-  
   return (
     <div className="main">
       <div class="logo">
@@ -64,7 +63,6 @@ function Example(props) {
     </div>
   );
 }
-
 
 function Divslider() {
   const [isLeftHovered, setIsLeftHovered] = useState(false);
