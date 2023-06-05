@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 export default function Join() {
-    const API_URL = 'http://localhost:8080/api/users/';
+    const API_URL = '/api/users/';
 
     const [email, setEmail] = useState("");
     const [pw, setpw] = useState("");

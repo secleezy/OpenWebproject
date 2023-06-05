@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import com.example.openwebproject_shoppingmall.model.User;
 import com.example.openwebproject_shoppingmall.repository.UserRepository;
 
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -28,7 +30,7 @@ public class UserService {
         return user;
     }
 
-    public User signin(String id, String password) {
+    public User signin(String id, String password, HttpServletResponse response) {
         Optional<User> userOptional = userRepository.findById(id);
 
         if (!userOptional.isPresent()) {
@@ -40,6 +42,9 @@ public class UserService {
         if (!new BCryptPasswordEncoder().matches(password, user.getPassword())) {
             throw new BadCredentialsException("Invalid password");
         }
+
+        Cookie idCookie = new Cookie("id", id);
+        response.addCookie(idCookie);
 
         return user;
     }
