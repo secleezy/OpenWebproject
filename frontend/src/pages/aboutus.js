@@ -25,21 +25,21 @@ export default function Aboutus() {
       name: 'Beomsun',
       FB: 'Front-End & Back-End',
       part: [
-        'Create & Connect DB',<br/>,
-        'All Item page & Best Item page',<br/>,
-        'My page',<br/>,
-        'Stock List',<br/>,
-        'Join',<br/>,
-        'Login',<br/>,
+        <li>Create & Connect DB</li>,
+        <li>All Item page & Best Item page'</li>,
+        <li>My page'</li>,
+        <li>Stock List'</li>,
+        <li>Join'</li>,
+        <li>Login'</li>,
       ]
     },
     {
       name: 'Jungyun',
       FB: 'Front-End',
       part: [
-        'Main page',<br/>,
-        'About us page',<br/>,
-        'Footer Component',<br/>,
+        <li>Main page'</li>,
+        <li>About us page'</li>,
+        <li>Footer Component'</li>,
         ]
     }
   ];
@@ -88,10 +88,6 @@ function Career(props) {
       <hr />
       <p id="t">{props.in.FB}</p>
       <p id="t">{props.in.part}</p>
-    </div>
-    <div>
-      <img src="" id={iid}
-      data-aos="flip-left"/>
     </div>
   </div>
   );
