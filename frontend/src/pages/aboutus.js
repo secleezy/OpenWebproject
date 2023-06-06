@@ -49,7 +49,7 @@ export default function Aboutus() {
             <div class="container-fluid ab-1">
                 <h1 class="ab-titles">Develop Team Introduction</h1>
                 <hr class="ab-hr" />
-                <img class="col-sm-3" src="https://pr.cbnu.ac.kr/resource/DATA/editor/202009/160085093733303yYIT.png" alt="image" />
+                <img class="col-sm-3" src="aboutUs_pic.png" alt="aboutUS" />
                 <div class="col-sm-7 ab-intro">
                     <p>우리 팀은 지연, 범순, 정윤 이상 3명의 팀원으로 구성되어있습니다.</p>
                     <p>우리는 충북대학교 전자정보대학 소프트웨어학과의 <b>오픈소스 웹 소프트웨어</b>과목의 프로젝트로 이 웹사이트를 제작하였습니다.</p>
