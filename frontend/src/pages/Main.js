@@ -16,7 +16,7 @@ export default function All() {
         <Example />
         <hr />
         <h1><b>No.0 Luxury Shop</b></h1>
-        <p>쿠쿨자에 오신것을 환영합니다.</p>
+        <p>웹페이지에 오신것을 환영합니다.</p>
         <hr />
       </div>
       <Divslider />
@@ -29,15 +29,15 @@ function Example(props) {
   var items = [
     {
       name: 'Slide #1',
-      link: 'https://cf-eba.everytime.kr/20230529_kosaf_scholarship_home.jpg',
+      link: '',
     },
     {
       name: 'Slide #2',
-      link: 'https://cf-eba.everytime.kr/20230531_Kosaf_Work_home.jpg',
+      link: '',
     },
     {
       name: 'Slide #3',
-      link: 'https://cf-eba.everytime.kr/20230601_Goorm_KDT_9oormthon_10_1_B_home.png',
+      link: '',
     },
     {
       name: 'Slide #4',
