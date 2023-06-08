@@ -1,8 +1,11 @@
 import React from 'react';
 import "./UserInterface.css"; // Import your CSS
 import { Link } from "react-router-dom";
+import { useState } from 'react'; //리액트 동적변수 사용
+
 export default function All() {
     const imgRoute = "./images/item/";
+    const [iscartopen, setiscartopen] = useState(0);
 
     const products = [
         {
@@ -29,18 +32,14 @@ export default function All() {
             id: 5,
             name: "product5",
             category: "flog",
-        },
-        {
-            id: 6,
-            name: "product6",
-            category: "heart"
         }
     ];
-
-
-    const showaddstocklist = () => {
-
+    const addcart = productnumber => {
+        console.log(productnumber);
+        iscartopen[productnumber]=!iscartopen[productnumber];
     }
+
+
     return (
         <div className="all">
             <Link to='/'><img src="images/logo.png" alt="BigCo Inc. logo" style={{ width: '200px', margin: '30px', marginBottom: '40px' }} /></Link>
@@ -58,16 +57,27 @@ export default function All() {
                 {products.map((product) => (
                     <div className="product-item" key={product.id}>
                         <Link to='/itemdetail'>
+                            <div style={{height: '550px', backgroundImage: "url(" + imgRoute + product.category + "/" + 1 + ".png)", backgroundSize:'cover', position:'relative'}} 
+                            onMouseEnter={()=>setiscartopen(product.id)} onMouseLeave={()=>setiscartopen(0)}>
+                            {iscartopen==product.id &&
                             <div>
+                                <div class="itemaddcart">
 
-                                <img style={{ height: '500px' }} src={imgRoute + product.category + "/" + 1 + ".png"} alt={product.name} onmouseenter={showaddstocklist}>
-                                </img>
-
+                                </div>
                             </div>
+                            }
+                            
+                            </div>
+
+
+
                         </Link>
-                        <Link to='/itemdetail'><p>{product.name}</p></Link>
-                        <p>$5</p>
-                        <p>색</p>
+
+                        <Link to='/itemdetail'><p>{product.category}</p></Link>
+                        <p>35,000원</p>
+                        <p>
+                            <div class="color"></div>
+                        </p>
                         <p>당일출고</p>
                     </div>
                 ))}
