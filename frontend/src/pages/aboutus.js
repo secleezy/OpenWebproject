@@ -8,48 +8,48 @@ export default function Aboutus() {
         AOS.init();
     });
 
-    const infor = [
-        {
-            name: 'Jiyeon',
-            FB: 'Front-End & Leader',
-            part: [
-                <li>Create Presentation</li>,
-                <li>Navigation Menu (Slide animation)</li>,
-                <li>Place Component</li>,
-                <li>Join Form</li>,
-                <li>Community page [Notice, FAQ Board]</li>,
-                <li>Item Detail page</li>
-            ]
-        },
-        {
-            name: 'Beomsun',
-            FB: 'Front-End & Back-End',
-            part: [
-                'Create & Connect DB', <br />,
-                'All Item page & Best Item page', <br />,
-                'My page', <br />,
-                'Stock List', <br />,
-                'Join', <br />,
-                'Login', <br />,
-            ]
-        },
-        {
-            name: 'Jungyun',
-            FB: 'Front-End',
-            part: [
-                'Main page', <br />,
-                'About us page', <br />,
-                'Footer Component', <br />,
-            ]
-        }
-    ];
+  const infor = [
+    {
+      name: 'Jiyeon',
+      FB: 'Front-End & Leader',
+      part: [
+        <li>Create Presentation</li>,
+        <li>Navigation Menu (Slide animation)</li>,
+        <li>Place Component</li>,
+        <li>Join Form</li>,
+        <li>Community page [Notice, FAQ Board]</li>,
+        <li>Item Detail page</li>
+        ]
+    },
+    {
+      name: 'Beomsun',
+      FB: 'Front-End & Back-End',
+      part: [
+        <li>Create & Connect DB</li>,
+        <li>All Item page & Best Item page'</li>,
+        <li>My page'</li>,
+        <li>Stock List'</li>,
+        <li>Join'</li>,
+        <li>Login'</li>,
+      ]
+    },
+    {
+      name: 'Jungyun',
+      FB: 'Front-End',
+      part: [
+        <li>Main page'</li>,
+        <li>About us page'</li>,
+        <li>Footer Component'</li>,
+        ]
+    }
+  ];
     return (
         <div className="About-div">
             <h1>ABOUT US</h1>
             <div class="container-fluid ab-1">
                 <h1 class="ab-titles">Develop Team Introduction</h1>
                 <hr class="ab-hr" />
-                <img class="col-sm-3" src="https://pr.cbnu.ac.kr/resource/DATA/editor/202009/160085093733303yYIT.png" alt="image" />
+                <img class="col-sm-3" src="aboutUs_pic.png" alt="aboutUS" />
                 <div class="col-sm-7 ab-intro">
                     <p>우리 팀은 지연, 범순, 정윤 이상 3명의 팀원으로 구성되어있습니다.</p>
                     <p>우리는 충북대학교 전자정보대학 소프트웨어학과의 <b>오픈소스 웹 소프트웨어</b>과목의 프로젝트로 이 웹사이트를 제작하였습니다.</p>
@@ -76,23 +76,19 @@ export default function Aboutus() {
     );
 }
 function Career(props) {
-    var iid = props.inum + "i";
-    return (
-        <div>
-            <div
-                id={props.inum}
-                data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom"
-            >
-                <p id="t"><b>{props.in.name}</b></p>
-                <hr />
-                <p id="t">{props.in.FB}</p>
-                <p id="t">{props.in.part}</p>
-            </div>
-            <div>
-                <img src="" id={iid}
-                    data-aos="flip-left" />
-            </div>
-        </div>
-    );
+  var iid = props.inum + "i";
+  return (
+  <div>
+    <div
+      id={props.inum}
+      data-aos="fade-up"
+      data-aos-anchor-placement="bottom-bottom"
+    >
+      <p id="t"><b>{props.in.name}</b></p>
+      <hr />
+      <p id="t">{props.in.FB}</p>
+      <p id="t">{props.in.part}</p>
+    </div>
+  </div>
+  );
 }
