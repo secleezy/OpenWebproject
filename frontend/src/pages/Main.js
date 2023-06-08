@@ -33,7 +33,7 @@ function Example(props) {
     },
     {
       name: 'Slide #2',
-      link: '',
+      link: 'test2.jpg',
     },
     {
       name: 'Slide #3',
@@ -41,7 +41,7 @@ function Example(props) {
     },
     {
       name: 'Slide #4',
-      link: 'test4',
+      link: 'test4.jpg',
     },
     {
       name: 'Slide #5',
