@@ -57,15 +57,20 @@ export default function All() {
             <div className="product-grid">
                 {products.map((product) => (
                     <div className="product-item" key={product.id}>
-                        <Link to='/itemdetail'>
+                        <Link to={{
+                            pathname: '/itemdetail',
+                            state: {
+                                id: product.id,
+                                name: product.name,
+                                category: product.category,
+                                imgRoute: imgRoute + product.category + "/" + 1 + ".png",
+                            }
+                        }}>
                             <div>
-
-                                <img style={{ height: '500px' }} src={imgRoute + product.category + "/" + 1 + ".png"} alt={product.name} onmouseenter={showaddstocklist}>
-                                </img>
-
+                                <img style={{ height: '500px' }} src={imgRoute + product.category + "/" + 1 + ".png"} alt={product.name} onmouseenter={showaddstocklist} />
                             </div>
+                            <p>{product.name}</p>
                         </Link>
-                        <Link to='/itemdetail'><p>{product.name}</p></Link>
                         <p>$5</p>
                         <p>색</p>
                         <p>당일출고</p>
