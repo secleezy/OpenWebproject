@@ -1,9 +1,13 @@
 import "./UserInterface.css"; //내가만든 css 가져오기
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import React, { useState } from 'react'; //리액트 동적변수 사용
 
 export default function Itemdetail(props) {
+    const product = useLocation().state;
+    let { id, name, category, imgRoute } = product || {};
+    console.log(product);
+
     const [isCheck, setCheck] = useState(true);
     const [isCheck2, setCheck2] = useState(false);
     const [isCheck3, setCheck3] = useState(false);
@@ -39,7 +43,7 @@ export default function Itemdetail(props) {
             <table style={{ display: 'inline-block' }}>
                 <td>
                     {/*이미지 구간*/}
-                    <img src={props.imgsrc} style={{ width: '450px', height: '650px' }}></img>
+                    <img src={imgRoute} style={{ width: '450px', height: '650px' }}></img>
                 </td>
                 <td style={{ textAlign: 'left', verticalAlign: 'top', padding: '20px' }}>
                     {/*상품정보 구간*/}
