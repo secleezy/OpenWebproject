@@ -29,7 +29,7 @@ function Example(props) {
   var items = [
     {
       name: 'Slide #1',
-      link: '',
+      link: 'test1.jpg',
     },
     {
       name: 'Slide #2',
@@ -48,14 +48,14 @@ function Example(props) {
       link: 'test5',
     },
   ];
-  const imgRoute = "./images/main-slide/";
+  const imgRoute = "images/main-slide/";
   return (
     <div>
     <Carousel>
       {items.map((item, i) => (
         <Paper>
           <div class="main-slide">
-            <img class="main-slice" src= {item.link} alt={item.name}/>
+            <img class="main-slice" src= {imgRoute + item.link} alt={item.name}/>
           </div>
         </Paper>
       ))}
