@@ -2,10 +2,13 @@ import React from 'react';
 import "./UserInterface.css"; // Import your CSS
 import { Link } from "react-router-dom";
 import { useState } from 'react'; //리액트 동적변수 사용
+import { useCookies } from "react-cookie";
 
 export default function All() {
     const imgRoute = "./images/item/";
     const [iscartopen, setiscartopen] = useState(0);
+    const [cookies, setCookie, removeCookie] = useCookies(['itemcookie']);
+    
     const products = [
         {
             id: 1,
@@ -37,8 +40,11 @@ export default function All() {
             name: "product6",
             category: "heart"
         }
-    ];
 
+    ];
+    const additem = productname => {
+        setCookie("item_"+productname, true, { path: '/', maxAge: 3600 });
+        };
 
     const showaddstocklist = () => {
 
@@ -70,12 +76,14 @@ export default function All() {
                         }}>
                             <div style={{height: '550px', backgroundImage: "url(" + imgRoute + product.category + "/" + 1 + ".png)", backgroundSize:'cover', position:'relative'}} 
                             onMouseEnter={()=>setiscartopen(product.id)} onMouseLeave={()=>setiscartopen(0)}>
+                            <Link>
                             {iscartopen==product.id &&
                             
                             <div class="itemaddcart">
-                                d
+                                <div onClick={()=>additem(product.id)}>추가</div>
                             </div>
                             }
+                            </Link>
                             </div>
                             <p>{product.name}</p>
                         </Link>
