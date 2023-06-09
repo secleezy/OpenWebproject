@@ -5,7 +5,9 @@
     color: gray;
     font-family: 'Noto Sans KR', sans-serif;
 }
-
+ul, ol, li {
+    list-style: outside none none;
+}
 a {
     /*링크스타일*/
     color: gray;
@@ -178,6 +180,20 @@ button {
     left: 95%;
     top:35px;
     background-color: red;
+}
+
+.itemaddcart{
+    height: 80px;
+
+    background-color: rgba( 0, 0, 0, 0.7 ); /*opacity로 넣으면 글자까지투명*/
+    width: 40%;
+    position: absolute;
+    left: 60%;
+    bottom: 0;
+    color: white;
+    font-size: 30px;
+    border-radius: 20px 0 0 0;
+
 }
 
 /* UserInterface.css */
