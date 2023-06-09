@@ -29,23 +29,15 @@ function Example(props) {
   var items = [
     {
       name: 'Slide #1',
-      link: 'test1.jpg',
+      link: 'p1.png',
     },
     {
       name: 'Slide #2',
-      link: 'test2.jpg',
+      link: 'p2.png',
     },
     {
       name: 'Slide #3',
-      link: '',
-    },
-    {
-      name: 'Slide #4',
-      link: 'test4.jpg',
-    },
-    {
-      name: 'Slide #5',
-      link: 'test5',
+      link: 'p3.png',
     },
   ];
   const imgRoute = "images/main-slide/";
@@ -70,6 +62,8 @@ function Divslider() {
 
   return (
     <div className="container">
+        <img className = "imgLogo iL1" src="images/main-slide/R.png" />
+        <img className = "imgLogo iL2" src="images/main-slide/N.png" />
       <div
         className={`bar ${isLeftHovered ? 'left-hovered' : ''} ${
           isRightHovered ? 'right-hovered' : ''
@@ -105,6 +99,7 @@ function Divslider() {
           </p>
         </div>
       </div>
+
     </div>
   );
 }

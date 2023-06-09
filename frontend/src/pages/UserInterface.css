@@ -334,22 +334,22 @@ button {
 
 /*Main.js */
 .main{
-    margin: 300px;
+    margin: 250px;
     margin-top: 0px;
 }
 .main-main{
-    height: 800px;
+    height: 900px;
 }
-.main-slide{
-    height: 170px;
+.main-slide, .main-slice{
+    height: 450px;
 }
 .left-content,
 .right-content {
   position: absolute;
-  top: 800px;
+  top: 1000px;
   width: 0;
   height: 300px;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.7);
   border: solid rgba(0,0,0,0) 50px;
   overflow: hidden;
   transition: width 0.3s;
@@ -372,4 +372,19 @@ button {
 .right-hovered .left-content,
 .left-hovered .right-content {
   width: 40%;
+}
+
+.imgLogo {
+    width: 250px;
+    height: 250px;
+    position:absolute;
+}
+
+.iL1{
+    top:980px;
+    right: 170px;
+}
+.iL2 {
+    top: 980px;
+    left: 170px;
 }
