@@ -366,7 +366,7 @@ button {
   width: 0;
   height: 300px;
   background-color: rgba(0,0,0,0.7);
-  border: solid rgba(0,0,0,0) 50px;
+  border:rgba( 0, 0, 0, 0) solid 50px;
   overflow: hidden;
   transition: width 0.3s;
 }
@@ -376,18 +376,22 @@ button {
 }
 
 .left-content {
-  left: 50%;
+  left: 40%;
   text-align: right;
 }
 
 .right-content {
-  right: 50%;
+  right: 60%;
   text-align: left;
 }
 
-.right-hovered .left-content,
-.left-hovered .right-content {
-  width: 40%;
+.right-hovered .left-content
+{
+  width: 25%;
+}
+.left-hovered .right-content 
+{
+    width: 25%;
 }
 
 .imgLogo {
@@ -397,10 +401,23 @@ button {
 }
 
 .iL1{
-    top:980px;
-    right: 170px;
+    top: 1000px;
+    right: 660px;
 }
 .iL2 {
-    top: 980px;
-    left: 170px;
+    top: 1000px;
+    left: 260px;
+}
+.Naming{
+    position: absolute;
+    top: 995px;
+    right: 305px;
+    height: 310px;
+    width: 300px;
+    border: black solid 50px;
+}
+.Naming, .Naming h1{
+    background-color: black;
+    color: white;
+    font-weight: bold;
 }

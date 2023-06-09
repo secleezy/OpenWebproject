@@ -57,26 +57,27 @@ function Example(props) {
 }
 
 function Divslider() {
-  const [isLeftHovered, setIsLeftHovered] = useState(false);
-  const [isRightHovered, setIsRightHovered] = useState(false);
-
+  const [isVisible1, setVisible1] = useState(false);
+  const [isVisible2, setVisible2] = useState(false);
   return (
     <div className="container">
         <img className = "imgLogo iL1" src="images/main-slide/R.png" />
         <img className = "imgLogo iL2" src="images/main-slide/N.png" />
       <div
-        className={`bar ${isLeftHovered ? 'left-hovered' : ''} ${
-          isRightHovered ? 'right-hovered' : ''
-        }`}
+        className="left-hovered right-hovered"
       >
         <div
-          className="left-content"
-          onMouseEnter={() => setIsRightHovered(true)}
-          onMouseLeave={() => setIsRightHovered(false)}
+          className={`left-content ${isVisible1 ? 'visibleL' : ""}`}
+          onMouseEnter={() => setVisible1(true)}
+          onMouseLeave={() => setVisible1(false)}
+
         >
           
           <h2 id="main-t"><a id="main-t" href="/all">Ring</a></h2>
-          <p id="main-t">
+          <p id="main-t" style={{display: isVisible1 ? 'block' : 'none',
+            transition: "opacity 0.9s",
+            opacity: isVisible1 ? 1 : 0,
+          }}>
             **의 반지와 함께,
             <br />
             마음껏 바라고, 꿈을 펼쳐라.
@@ -85,12 +86,15 @@ function Divslider() {
           </p>
         </div>
         <div
-          className="right-content"
-          onMouseEnter={() => setIsLeftHovered(true)}
-          onMouseLeave={() => setIsLeftHovered(false)}
+          className={`right-content ${isVisible2 ? 'visibleR' : ""}`}
+          onMouseEnter={() => setVisible2(true)}
+          onMouseLeave={() => setVisible2(false)}
         >
           <h2 id="main-t"><a id="main-t" href="/all">Necklace</a></h2>
-          <p id="main-t">
+          <p id="main-t" style={{display: isVisible2 ? 'block' : 'none',
+            transition: "opacity 0.9s",
+            opacity: isVisible2 ? 1 : 0,
+          }}>
             당신의 아름다움을 한층 빛내줄
             <br />
             자신감 있게, **과 함께 나아가라.
@@ -99,7 +103,9 @@ function Divslider() {
           </p>
         </div>
       </div>
-
+      <div class="Naming">
+        <h1>Royal, Premium, Beauty</h1>
+      </div>
     </div>
   );
 }
