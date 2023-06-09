@@ -29,33 +29,25 @@ function Example(props) {
   var items = [
     {
       name: 'Slide #1',
-      link: '',
+      link: 'p1.png',
     },
     {
       name: 'Slide #2',
-      link: '',
+      link: 'p2.png',
     },
     {
       name: 'Slide #3',
-      link: '',
-    },
-    {
-      name: 'Slide #4',
-      link: 'test4',
-    },
-    {
-      name: 'Slide #5',
-      link: 'test5',
+      link: 'p3.png',
     },
   ];
-  const imgRoute = "./images/main-slide/";
+  const imgRoute = "images/main-slide/";
   return (
     <div>
     <Carousel>
       {items.map((item, i) => (
         <Paper>
           <div class="main-slide">
-            <img class="main-slice" src= {item.link} alt={item.name}/>
+            <img class="main-slice" src= {imgRoute + item.link} alt={item.name}/>
           </div>
         </Paper>
       ))}
@@ -70,6 +62,8 @@ function Divslider() {
 
   return (
     <div className="container">
+        <img className = "imgLogo iL1" src="images/main-slide/R.png" />
+        <img className = "imgLogo iL2" src="images/main-slide/N.png" />
       <div
         className={`bar ${isLeftHovered ? 'left-hovered' : ''} ${
           isRightHovered ? 'right-hovered' : ''
@@ -105,6 +99,7 @@ function Divslider() {
           </p>
         </div>
       </div>
+
     </div>
   );
 }
