@@ -1,14 +1,18 @@
 import "./UserInterface.css"; //내가만든 css 가져오기
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { useCookies } from "react-cookie";
+import { Cookies, useCookies } from "react-cookie";
+import { useState, useEffect } from 'react'; //리액트 동적변수 사용
 
 export default function Stocklist() {
     const imgRoute = "./images/item/";
     const movePage = useNavigate();
 
     const [cookies, setCookie, removeCookie] = useCookies(['itemcookie']);
+    const [totalprice, settotalprice] = useState(0);
+    const [flag,setflag]=useState(true);
 
+    var num=0;
     const products = [
         {
             id: 1,
@@ -35,13 +39,33 @@ export default function Stocklist() {
             name: "product5",
             category: "flog",
         },
-        {
-            id: 6,
-            name: "product6",
-            category: "heart"
-        }
 
     ];
+    
+    useEffect(() => {
+        
+        if(cookies.item_1=="true")
+        {
+            num=num+38000;
+        }
+        if(cookies.item_2=="true")
+        {
+            num=num+38000;
+        }
+        if(cookies.item_3=="true")
+        {
+            num=num+85000;
+        }
+        if(cookies.item_4=="true")
+        {
+            num=num+26000;
+        }
+        if(cookies.item_5=="true")
+        {
+            num=num+52900;
+        }
+        settotalprice(num/2); //리액트는 렌더링이 두번씩됨...
+      },[]);
 
 
     return (
@@ -63,71 +87,85 @@ export default function Stocklist() {
                     {cookies.item_1=="true" &&
                     <tr style={{ height: '200px', borderBottom: '1px solid lightgray' }}>
                         <td style={{ width: '130px' }}>
+                        <img style={{ height: '180px' }} src={imgRoute + products[0].category + "/" + 1 + ".png"} alt={products.name} />
+                        </td>
+                        <td style={{ width: '600px',  textAlign:'left', paddingLeft:'20px'}}>{products[0].category}</td>
+                        <td style={{ width: '180px' }}>1</td>
+                        <td style={{ width: '130px' }}>38,000원</td>
+                        <td style={{ width: '130px' }}><p style={{cursor:'pointer', marginTop:'10px'}} onClick={()=>{setCookie("item_1", false, { path: '/', maxAge: 3600  });
+                            window.location.replace("/stocklist");
+                            alert("It has been deleted.");}}>DEL</p></td>
+                    </tr>
+                    }
+                    {cookies.item_2=="true" &&
+                    <tr style={{ height: '200px', borderBottom: '1px solid lightgray' }}>
+                        <td style={{ width: '130px' }}>
                         <img style={{ height: '180px' }} src={imgRoute + products[1].category + "/" + 1 + ".png"} alt={products.name} />
                         </td>
                         <td style={{ width: '600px',  textAlign:'left', paddingLeft:'20px'}}>{products[1].category}</td>
                         <td style={{ width: '180px' }}>1</td>
-                        <td style={{ width: '130px' }}>35,000원</td>
-                        <td style={{ width: '130px' }}><p onClick={()=>{removeCookie(cookies.item_1, { path: '/' })}}>DEL</p></td>
+                        <td style={{ width: '130px' }}>38,000원</td>
+                        <td style={{ width: '130px' }}><p style={{cursor:'pointer', marginTop:'10px'}} onClick={()=>{setCookie("item_2", false, { path: '/', maxAge: 3600  });
+                            window.location.replace("/stocklist");
+                            alert("It has been deleted.");}}>DEL</p></td>
                     </tr>
                     }
-                    {cookies.item_2=="true" &&
+                    {cookies.item_3=="true" &&
                     <tr style={{ height: '200px', borderBottom: '1px solid lightgray' }}>
                         <td style={{ width: '130px' }}>
                         <img style={{ height: '180px' }} src={imgRoute + products[2].category + "/" + 1 + ".png"} alt={products.name} />
                         </td>
                         <td style={{ width: '600px',  textAlign:'left', paddingLeft:'20px'}}>{products[2].category}</td>
                         <td style={{ width: '180px' }}>1</td>
-                        <td style={{ width: '130px' }}>35,000원</td>
-                        <td style={{ width: '130px' }}><p onClick={()=>{removeCookie(cookies.item_2, { path: '/' })}}>DEL</p></td>
+                        <td style={{ width: '130px' }}>85,000원</td>
+                        <td style={{ width: '130px' }}><p style={{cursor:'pointer', marginTop:'10px'}} onClick={()=>{setCookie("item_3", false, { path: '/', maxAge: 3600  });
+                            window.location.replace("/stocklist");
+                            alert("It has been deleted.");}}>DEL</p></td>
                     </tr>
                     }
-                    {cookies.item_3=="true" &&
+                    {cookies.item_4=="true" &&
                     <tr style={{ height: '200px', borderBottom: '1px solid lightgray' }}>
                         <td style={{ width: '130px' }}>
                         <img style={{ height: '180px' }} src={imgRoute + products[3].category + "/" + 1 + ".png"} alt={products.name} />
                         </td>
                         <td style={{ width: '600px',  textAlign:'left', paddingLeft:'20px'}}>{products[3].category}</td>
                         <td style={{ width: '180px' }}>1</td>
-                        <td style={{ width: '130px' }}>35,000원</td>
-                        <td style={{ width: '130px' }}><p onClick={()=>{removeCookie(cookies.item_3, { path: '/' })}}>DEL</p></td>
+                        <td style={{ width: '130px' }}>26,000원</td>
+                        <td style={{ width: '130px' }}><p style={{cursor:'pointer', marginTop:'10px'}} onClick={()=>{setCookie("item_4", false, { path: '/', maxAge: 3600  });
+                            window.location.replace("/stocklist");
+                            alert("It has been deleted.");}}>DEL</p></td>
                     </tr>
                     }
-                    {cookies.item_4=="true" &&
+                    {cookies.item_5=="true" &&
                     <tr style={{ height: '200px', borderBottom: '1px solid lightgray' }}>
                         <td style={{ width: '130px' }}>
                         <img style={{ height: '180px' }} src={imgRoute + products[4].category + "/" + 1 + ".png"} alt={products.name} />
                         </td>
                         <td style={{ width: '600px',  textAlign:'left', paddingLeft:'20px'}}>{products[4].category}</td>
                         <td style={{ width: '180px' }}>1</td>
-                        <td style={{ width: '130px' }}>35,000원</td>
-                        <td style={{ width: '130px' }}><p onClick={()=>{removeCookie(cookies.item_4, { path: '/' })}}>DEL</p></td>
-                    </tr>
-                    }
-                    {cookies.item_5=="true" &&
-                    <tr style={{ height: '200px', borderBottom: '1px solid lightgray' }}>
-                        <td style={{ width: '130px' }}>
-                        <img style={{ height: '180px' }} src={imgRoute + products[5].category + "/" + 1 + ".png"} alt={products.name} />
-                        </td>
-                        <td style={{ width: '600px',  textAlign:'left', paddingLeft:'20px'}}>{products[5].category}</td>
-                        <td style={{ width: '180px' }}>1</td>
-                        <td style={{ width: '130px' }}>35,000원</td>
-                        <td style={{ width: '130px' }}><p onClick={()=>{removeCookie(cookies.item_5, { path: '/' })}}>DEL</p></td>
-                    </tr>
-                    }
-                    {cookies.item_6=="true" &&
-                    <tr style={{ height: '200px', borderBottom: '1px solid lightgray' }}>
-                        <td style={{ width: '130px' }}>
-                        <img style={{ height: '180px' }} src={imgRoute + products[6].category + "/" + 1 + ".png"} alt={products.name} />
-                        </td>
-                        <td style={{ width: '600px',  textAlign:'left', paddingLeft:'20px'}}>{products[6].category}</td>
-                        <td style={{ width: '180px' }}>1</td>
-                        <td style={{ width: '130px' }}>35,000원</td>
-                        <td style={{ width: '130px' }}><p onClick={()=>{removeCookie(cookies.item_6, { path: '/' })}}>DEL</p></td>
+                        <td style={{ width: '130px' }}>52,900원</td>
+                        <td style={{ width: '130px' }}><p style={{cursor:'pointer', marginTop:'10px'}} onClick={()=>{
+                            setCookie("item_5", false, { path: '/', maxAge: 3600  });
+                            window.location.replace("/stocklist");
+                            alert("It has been deleted.");
+                            }}>DEL</p></td>
                     </tr>
                     }
 
-
+                    <tr style={{ height: '40px', textAlign:'right', display:'block', marginTop:'20px'}}>
+                        TOTAL : {totalprice}　
+                    <button class="black_button" onClick={()=>{
+                        setCookie("item_0", false, { path: '/', maxAge: 3600  });
+                        setCookie("item_1", false, { path: '/', maxAge: 3600  });
+                        setCookie("item_2", false, { path: '/', maxAge: 3600  });
+                        setCookie("item_3", false, { path: '/', maxAge: 3600  });
+                        setCookie("item_4", false, { path: '/', maxAge: 3600  });
+                        setCookie("item_5", false, { path: '/', maxAge: 3600  });
+                        alert("Thank you!");
+                        window.location.replace("/stocklist");
+                    }
+                    }>CHECKOUT</button>
+                    </tr>
 
 
 

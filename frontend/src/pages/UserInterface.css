@@ -184,7 +184,7 @@ button {
 
 .itemaddcart{
     height: 80px;
-
+    padding-top: 15px;
     background-color: rgba( 0, 0, 0, 0.7 ); /*opacity로 넣으면 글자까지투명*/
     width: 40%;
     position: absolute;

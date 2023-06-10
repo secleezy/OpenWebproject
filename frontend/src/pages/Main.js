@@ -14,10 +14,7 @@ export default function All() {
       </div>
       <div class="container-fluid main-main">
         <Example />
-        <hr />
-        <h1><b>No.0 Luxury Shop</b></h1>
-        <p>웹페이지에 오신것을 환영합니다.</p>
-        <hr />
+
       </div>
       <Divslider />
     </div>

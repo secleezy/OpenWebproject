@@ -14,31 +14,31 @@ export default function All() {
             id: 1,
             name: "product1",
             category: "bless",
+            price: "38,000원"
         },
         {
             id: 2,
             name: "product2",
             category: "dream",
+            price: "38,000원"
         },
         {
             id: 3,
             name: "product3",
             category: "cupid",
+            price: "85,000원"
         },
         {
             id: 4,
             name: "product4",
             category: "conch",
+            price: "26,000원"
         },
         {
             id: 5,
             name: "product5",
             category: "flog",
-        },
-        {
-            id: 6,
-            name: "product6",
-            category: "heart"
+            price: "52,900원"
         }
 
     ];
@@ -57,39 +57,30 @@ export default function All() {
             <b>All Products</b><br />
             <table style={{ width: '60%', display: 'inline-block', height: '35px', textAlign: 'center' }}><br />
 
-                <span style={{ width: '100px', display: 'inline-block' }}><Link to='/all'>Necklace</Link></span>
-                <span style={{ width: '100px', display: 'inline-block' }}><Link to='/all'>Ring</Link></span>
-                <span style={{ width: '100px', display: 'inline-block' }}><Link to='/all'>Earring</Link></span>
-
             </table>
             <div className="product-grid">
                 {products.map((product) => (
                     <div className="product-item" key={product.id}>
-                        <Link to={{
-                            pathname: '/itemdetail',
-                            state: {
+                        <Link to={'/itemdetail'} state=
+                            {{
                                 id: product.id,
                                 name: product.name,
                                 category: product.category,
                                 imgRoute: imgRoute + product.category + "/" + 1 + ".png",
-                            }
-                        }}>
+                            }}>
                             <div style={{height: '550px', backgroundImage: "url(" + imgRoute + product.category + "/" + 1 + ".png)", backgroundSize:'cover', position:'relative'}} 
                             onMouseEnter={()=>setiscartopen(product.id)} onMouseLeave={()=>setiscartopen(0)}>
                             <Link>
                             {iscartopen==product.id &&
                             
-                            <div class="itemaddcart">
-                                <div onClick={()=>additem(product.id)}>추가</div>
+                            <div class="itemaddcart" onClick={()=>additem(product.id)}>ADD
                             </div>
                             }
                             </Link>
                             </div>
-                            <p>{product.name}</p>
+                            <b style={{fontSize:'20px'}}>{product.category}</b>
                         </Link>
-                        <p>$5</p>
-                        <p>색</p>
-                        <p>당일출고</p>
+                        <p>{product.price}</p>
                     </div>
                 ))}
             </div>

@@ -372,7 +372,7 @@ export default function Itemdetail(props) {
                                     )}
                                     {view === 'N' && (
                                         <>
-                                            <td><img src="images/Nsize.jpg" alt="목걸이 사이즈 사진" style={{height:"800px"}}/></td>
+                                            <td><img src="../images/Nsize.jpg" alt="목걸이 사이즈 사진" style={{height:"800px"}}/></td>
                                         </>
                                     )}
                                 </tr>

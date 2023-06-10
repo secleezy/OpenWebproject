@@ -1,17 +1,17 @@
 import "./UserInterface.css"; //내가만든 css 가져오기
 import { useNavigate, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import React, { useState } from 'react'; //리액트 동적변수 사용
+import React, { useState, useEffect } from 'react'; //리액트 동적변수 사용
 
 export default function Itemdetail(props) {
-    const product = useLocation().state;
+    const product = useLocation().state.category;
     let { id, name, category, imgRoute } = product || {};
     console.log(product);
 
     const [isCheck, setCheck] = useState(true);
     const [isCheck2, setCheck2] = useState(false);
     const [isCheck3, setCheck3] = useState(false);
-
+    const [view, setView] = useState('');
     const [color, setcolor] = useState("");
     const [size, setsize] = useState("");
 
@@ -34,6 +34,12 @@ export default function Itemdetail(props) {
     const wishlist = () => {
         //함수구현
     }
+    
+
+    const location = useLocation();
+    useEffect(() => {
+        console.log(location);
+      }, [ location ]);
 
     return (
         <div style={{ textAlign: 'center' }}>
@@ -47,7 +53,7 @@ export default function Itemdetail(props) {
                 </td>
                 <td style={{ textAlign: 'left', verticalAlign: 'top', padding: '20px' }}>
                     {/*상품정보 구간*/}
-                    <b style={{ fontSize: '20px' }}>상품 이름{/*상품정보 구간*/}</b><br /><br />
+                    <b style={{ fontSize: '20px' }}>{product}</b><br /><br />
                     <b>상품 설명{/*상품정보 구간*/}</b><br /><br />
                     <p style={{ fontSize: '14px' }}>$1{/*상품정보 구간*/}</p>
                     <table style={{ width: '100%' }}>{/*상품정보 구간*/}
@@ -120,7 +126,86 @@ export default function Itemdetail(props) {
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    네 저는  사이즈입니다
+                                <div>
+                                    <button onClick={() => {setView('R')}}>반지 사이즈 보기</button>
+                                    <button onClick={() => {setView('N')}}>목걸이 사이즈 보기</button>
+                                </div>
+                                {view === 'R' && (
+                                        <>
+                                            <table style={{width:"100%", height:"600px"}}> 
+                                                <tr>
+                                                    <th>호수</th>
+                                                    <th>손가락 둘레</th>
+                                                    <th>반지 안지름</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>9호</td>
+                                                    <td>52mm</td>
+                                                    <td>15.8mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10호</td>
+                                                    <td>53mm</td>
+                                                    <td>16.0mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11호</td>
+                                                    <td>54mm</td>
+                                                    <td>16.4mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12호</td>
+                                                    <td>55mm</td>
+                                                    <td>16.6mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>13호</td>
+                                                    <td>56mm</td>
+                                                    <td>17.0mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>14호</td>
+                                                    <td>57mm</td>
+                                                    <td>17.2mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>15호</td>
+                                                    <td>58mm</td>
+                                                    <td>17.7mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>16호</td>
+                                                    <td>59mm</td>
+                                                    <td>18.0mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>17호</td>
+                                                    <td>60mm</td>
+                                                    <td>18.3mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>18호</td>
+                                                    <td>61mm</td>
+                                                    <td>18.6mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>19호</td>
+                                                    <td>62mm</td>
+                                                    <td>19.0mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20호</td>
+                                                    <td>63mm</td>
+                                                    <td>19.3mm</td>
+                                                </tr>
+                                            </table>
+                                        </>
+                                    )}
+                                    {view === 'N' && (
+                                        <>
+                                            <td><img src="../images/Nsize.jpg" alt="목걸이 사이즈 사진" style={{height:"800px"}}/></td>
+                                        </>
+                                    )}
                                 </tr>
                             </table>
                         </div>
