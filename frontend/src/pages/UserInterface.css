@@ -284,6 +284,9 @@ button {
 }
 
 /* aboutus.js */
+.empty{
+    height: 100px;
+}
 .About-div{
     margin: 300px;
     margin-top: 0px;
@@ -305,7 +308,7 @@ button {
     margin-right: 100px;
 }
 .ab-main{
-    height: 1800px;
+    height: 1600px;
 }
 
 
@@ -344,7 +347,8 @@ button {
 .gitcon{
     text-align: center;
     position: absolute;
-    bottom: -1800px;
+    bottom: -1650px;
+    left: 49%;
 }
 
 
@@ -362,7 +366,7 @@ button {
 .left-content,
 .right-content {
   position: absolute;
-  top: 1000px;
+  top: 1010px;
   width: 0;
   height: 300px;
   background-color: rgba(0,0,0,0.7);
@@ -401,16 +405,16 @@ button {
 }
 
 .iL1{
-    top: 1000px;
+    top: 1010px;
     right: 660px;
 }
 .iL2 {
-    top: 1000px;
+    top: 1010px;
     left: 260px;
 }
 .Naming{
     position: absolute;
-    top: 995px;
+    top: 1010px;
     right: 305px;
     height: 310px;
     width: 300px;
@@ -420,4 +424,8 @@ button {
     background-color: black;
     color: white;
     font-weight: bold;
+}
+.modelpic{
+    position: relative;
+    top: -20px;
 }

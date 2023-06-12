@@ -1,4 +1,4 @@
-import "./pages/UserInterface.css"; //?���?만든 css �??��?���?
+import "./pages/UserInterface.css"; //내가만든 css 가져오기
 
 function Footer() {
 
@@ -7,8 +7,8 @@ function Footer() {
       <div class="container-fluid row" style={{backgroundColor:"black"}}>
           <div class="col-sm-6" id="f-grid">
             <p class="f-text"><a>COMPANY. 65 | OWNER. JUNG YEEUN</a><br />
-            <a>사업자등록번호 : 000-00-00000 | 통신판매업신고번호: 제0000-CBNU-0000호</a><br />
-            <a>주소: (28644) 충북 청주시 서원구 충대로 1, 충북대학교 전자정보대학 소프트웨어학부 S4-1동(전자정보 3관)</a><br />
+            <a>Reg. number : 15-613-65656 | Mail order business rep. number: No.2011-CBNU-2023</a><br />
+            <a>Address: (28644) Chungdae-ro, Seowon-gu, Cheongju-si, Chungcheongbuk-do, Republic of Korea, Colleague of Computer-Science S4-1</a><br />
             </p>
             <hr style={{color:"white"}}/>
             <p class="f-text">MadyBy: Jiyeon & Beomsun & Jungyun</p>
@@ -16,11 +16,11 @@ function Footer() {
           <div class="col-sm-3" id="f-grid">
             <p class="f-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
               <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-              </svg>&nbsp; 000000@chungbuk.ac.kr</p>
+              </svg>&nbsp; chungdae@chungbuk.ac.kr</p>
             <p class="f-text">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-              </svg>&nbsp; (043)-123-4567</p>
+              </svg>&nbsp; (043)-0615-340</p>
           </div>
           <div class="col-sm-3" id="f-grid">
             <p class="f-text">

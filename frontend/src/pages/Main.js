@@ -1,4 +1,4 @@
-import "./UserInterface.css"; //ë‚´ê°€ë§Œë“  css ê°€ì ¸ì˜¤ê¸°
+import "./UserInterface.css"; //?‚´ê°?ë§Œë“  css ê°?? ¸?˜¤ê¸?
 import { Link } from 'react-router-dom';
 import { Paper } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
@@ -14,7 +14,7 @@ export default function All() {
       </div>
       <div class="container-fluid main-main">
         <Example />
-
+        <img class="modelpic" src="images/main-slide/model.png" alt="model.png" />
       </div>
       <Divslider />
     </div>
