@@ -1,9 +1,7 @@
 import "./UserInterface.css"; //내가만든 css 가져오기
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import React, { useState } from 'react'; //리액트 동적변수 사용
-
-export default function Itemdetail(props) {
+export default function Customs() {
     const [isCheck, setCheck] = useState(true);
     const [isCheck2, setCheck2] = useState(false);
     const [isCheck3, setCheck3] = useState(false);
@@ -78,38 +76,38 @@ export default function Itemdetail(props) {
             <br />
             <table style={{ display: 'inline-block' }}>
                 <td>
-                    {/*이미지 구간*/}
-                    <img src={props.imgsrc} alt = "sample image_custom" style={{ width: '450px', height: '650px' }}></img>
+                    {/*image area*/}
+                    <img src="" alt = "sample image_custom" style={{ width: '450px', height: '650px' }}></img>
                 </td>
                 <td style={{ textAlign: 'left', verticalAlign: 'top', padding: '20px' }}>
-                    {/*상품정보 구간*/}
-                    <b style={{ fontSize: '20px' }}>Own Custom Product(나만의 커스텀 상품)</b><br /><br />
-                    <b>상품 설명{/*상품정보 구간*/}</b><br /><br />
-                    <p style={{ fontSize: '14px' }}>$49.99{/*상품정보 구간*/}</p>
-                    <table style={{ width: '100%' }}>{/*상품정보 구간*/}
+                    {/*product info. area*/}
+                    <b style={{ fontSize: '20px' }}>Own Custom Product</b><br /><br />
+                    <b>Product Explanation{/*상품 정보*/}</b><br /><br />
+                    <p style={{ fontSize: '14px' }}>$1{/*product info.*/}</p>
+                    <table style={{ width: '100%' }}>{/*product info.*/}
                         <tr>
                             <td class="col-sm-4">
                                 Product & Size
                             </td>
                             <td class="col-sm-4">
-                                <select class="select" title="선택" style={{width: "80%", textAlign: 'center' }} value={selecting} onChange={selectChange}>
+                                <select class="select" title="Produc" style={{width: "80%", textAlign: 'center' }} value={selecting} onChange={selectChange}>
                                     <option value="">-select-</option>
                                     <option value="ring">Ring</option>
                                     <option value="necklace">Necklace</option>
                                 </select>
                             </td>
                             <td class="col-sm-4">
-                                <select class="select" title="사이즈 선택" style={{width: "80%", textAlign: 'center' }} value={size} onChange={sizeChange}>
+                                <select class="select" title="RingSize" style={{width: "80%", textAlign: 'center' }} value={size} onChange={sizeChange}>
                                 <option value="">-select-</option>
                                     {selecting === "ring" &&(
                                         <>
-                                            <option value="Rsize18">14호</option>
-                                            <option value="Rsize18">15호</option>
-                                            <option value="Rsize16">16호</option>
-                                            <option value="Rsize17">17호</option>
-                                            <option value="Rsize18">18호</option>
-                                            <option value="Rsize18">19호</option>
-                                            <option value="Rsize18">20호</option>
+                                            <option value="Rsize14">Size 14</option>
+                                            <option value="Rsize15">Size 15</option>
+                                            <option value="Rsize16">Size 16</option>
+                                            <option value="Rsize17">Size 17</option>
+                                            <option value="Rsize18">Size 18</option>
+                                            <option value="Rsize19">Size 19</option>
+                                            <option value="Rsize20">Size 20</option>
                                         </>
                                     )}
                                     {selecting === "necklace" &&(
@@ -131,7 +129,7 @@ export default function Itemdetail(props) {
                                 <tr>
                                     <td>Ring Type</td>
                                     <td>
-                                        <select class="select" title="반지 타입" style={{ width: '80%', textAlign: 'center' }} value={type} onChange={typeChange}>
+                                        <select class="select" title="ë°ě?? ????" style={{ width: '80%', textAlign: 'center' }} value={type} onChange={typeChange}>
                                             <option value="">-select-</option>
                                             <option value="TA">Type: A</option>
                                             <option value="TB">Type: B</option>
@@ -140,7 +138,7 @@ export default function Itemdetail(props) {
                                         </select>
                                     </td>
                                     <td>
-                                        <select class="select" title="반지 재질" style={{ width: '80%', textAlign: 'center' }} value={mate} onChange={mateChange}>
+                                        <select class="select" title="ë°ě?? ?Źě§?" style={{ width: '80%', textAlign: 'center' }} value={mate} onChange={mateChange}>
                                             <option value="">-select-</option>
                                             <option value="Gold">Gold</option>
                                             <option value="Silver">Silver</option>
@@ -150,22 +148,22 @@ export default function Itemdetail(props) {
                                 </tr>
                                 <tr>
                                     <td>
-                                        반지 쥬얼
+                                        Jewel
                                     </td>
                                     <td>
-                                        <select class="select" title="쥬얼 선택" style={{ width: '80%', textAlign: 'center' }} value={btype} onChange={btChange}>
+                                        <select class="select" title="Jewel-Select" style={{ width: '80%', textAlign: 'center' }} value={btype} onChange={btChange}>
                                             <option value="">-select-</option>
-                                            <option value="None">쥬얼X</option>
-                                            <option value="C-Black">원형-블랙</option>
-                                            <option value="C-Blue">원형-블루</option>
-                                            <option value="C-Red">원형-레드</option>
-                                            <option value="C-Green">원형-그린</option>
-                                            <option value="C-None">원형-투명</option>
-                                            <option value="Sq-Black">사각-블랙</option>
-                                            <option value="Sq-Blue">사각-블루</option>
-                                            <option value="Sq-Red">사각-레드</option>
-                                            <option value="Sq-Green">사각-그린</option>
-                                            <option value="Sq-None">사각-투명</option>
+                                            <option value="None">No Jewel</option>
+                                            <option value="C-Black">Circle-Black</option>
+                                            <option value="C-Blue">Circle-Blue</option>
+                                            <option value="C-Red">Circle-Red</option>
+                                            <option value="C-Green">Circle-Green</option>
+                                            <option value="C-None">Circle-None</option>
+                                            <option value="Sq-Black">Square-Black</option>
+                                            <option value="Sq-Blue">Square-Blue</option>
+                                            <option value="Sq-Red">Square-Red</option>
+                                            <option value="Sq-Green">Square-Green</option>
+                                            <option value="Sq-Clear">Square-Clear</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -178,7 +176,7 @@ export default function Itemdetail(props) {
                                         Chain-Type
                                     </td>
                                     <td>
-                                        <select class="select" title="Chain타입 선택" style={{ width: '80%', textAlign: 'center' }} value={type} onChange={typeChange}>
+                                        <select class="select" title="Chain type" style={{ width: '80%', textAlign: 'center' }} value={type} onChange={typeChange}>
                                             <option value="">-select-</option>
                                             <option value="T1310">Type: 1310</option>
                                             <option value="T1311">Type: 1311</option>
@@ -187,7 +185,7 @@ export default function Itemdetail(props) {
                                         </select>
                                     </td>
                                     <td>
-                                        <select class="select" title="Chain컬러 선택" style={{ width: '80%', textAlign: 'center' }} value={mate} onChange={mateChange}>
+                                        <select class="select" title="material" style={{ width: '80%', textAlign: 'center' }} value={mate} onChange={mateChange}>
                                             <option value="">-select-</option>
                                             <option value="Gold">Gold</option>
                                             <option value="Silver">Silver</option>
@@ -199,7 +197,7 @@ export default function Itemdetail(props) {
                                         Part-Top
                                     </td>
                                     <td>
-                                        <select class="select" title="Top타입 선택" style={{ width: '80%', textAlign: 'center' }} value={shape1} onChange={shapeChange1}>
+                                        <select class="select" title="TopBlock" style={{ width: '80%', textAlign: 'center' }} value={shape1} onChange={shapeChange1}>
                                             <option value="">-select-</option>
                                             <option value="Cir">Circle</option>
                                             <option value="Cat">Cat</option>
@@ -209,7 +207,7 @@ export default function Itemdetail(props) {
                                         </select>
                                     </td>
                                     <td>
-                                    <select class="select" title="Top컬러 선택" style={{ width: '80%', textAlign: 'center' }} value={color1} onChange={colorChange1}>
+                                    <select class="select" title="TopColor" style={{ width: '80%', textAlign: 'center' }} value={color1} onChange={colorChange1}>
                                             <option value="">-select-</option>
                                             <option value="Gold">Rose Gold</option>
                                             <option value="Silver">Silver</option>
@@ -223,7 +221,7 @@ export default function Itemdetail(props) {
                                         Part-Tail
                                     </td>
                                     <td>
-                                        <select class="select" title="컬러 선택" style={{ width: '80%', textAlign: 'center' }} value={shape2} onChange={shapeChange2}>
+                                        <select class="select" title="TailBlock" style={{ width: '80%', textAlign: 'center' }} value={shape2} onChange={shapeChange2}>
                                             <option value="Cir">Circle</option>
                                             <option value="Cat">Cat</option>
                                             <option value="Dog">Dog</option>
@@ -232,7 +230,7 @@ export default function Itemdetail(props) {
                                         </select>
                                     </td>
                                     <td>
-                                        <select class="select" title="컬러 선택" style={{ width: '80%', textAlign: 'center' }} value={color2} onChange={colorChange2}>
+                                        <select class="select" title="TailColor" style={{ width: '80%', textAlign: 'center' }} value={color2} onChange={colorChange2}>
                                             <option value="">-select-</option>
                                             <option value="Gold">Rose Gold</option>
                                             <option value="Silver">Silver</option>
@@ -245,7 +243,7 @@ export default function Itemdetail(props) {
                         )}
                     </table>
                     <div>
-                        {/*상품 선택칸*/}
+                        {/*Product Selecting*/}
                     </div>
                     <b>
                         TOTAL : ${ } ({ } item(s))
@@ -258,12 +256,12 @@ export default function Itemdetail(props) {
                     <b style={{ cursor: 'pointer' }} onClick={() => { setCheck((e) => !e); setCheck2(false); }}>PRODUCT INFO</b><br />
                     {(isCheck &&
                         <div class="detailshopping" style={{ height: '200px' }}>
-                            <h6>목걸이</h6>
+                            <h6>Necklace</h6>
                             <p>Size : Free(35~65cm)</p>
                             <p>Weight : ??g~??g</p>
-                            <h6>반지</h6>
+                            <h6>Ring</h6>
                             <p>Size : Free</p>
-                            <p>Weight : (쥬얼X)??g~??g     (쥬얼O)??g~??g</p>
+                            <p>Weight : ??g~??g</p>
                         </div>)
                         ||
                         <div class="detailshopping" style={{ height: '0px' }}>
@@ -274,7 +272,7 @@ export default function Itemdetail(props) {
                     <b style={{ cursor: 'pointer' }} onClick={() => { setCheck2((e) => !e); setCheck(false); }}>SHOPPING INFO</b><br />
                     {(isCheck2 &&
                         <div class="detailshopping" style={{ height: '100px' }}>
-                            {/*상품 설명칸*/}
+                            {/*product explan*/}
                             ad
                         </div>)
                         ||
@@ -294,8 +292,8 @@ export default function Itemdetail(props) {
                                 </tr>
                                 <tr>
                                     <div>
-                                    <button onClick={() => {setView('R')}}>반지 사이즈 보기</button>
-                                    <button onClick={() => {setView('N')}}>목걸이 사이즈 보기</button>
+                                    <button onClick={() => {setView('R')}}>Ring size</button>
+                                    <button onClick={() => {setView('N')}}>Necklace size</button>
                                     </div>
                                 </tr>
                                 <tr>
@@ -303,67 +301,67 @@ export default function Itemdetail(props) {
                                         <>
                                             <table style={{width:"100%", height:"600px"}}> 
                                                 <tr>
-                                                    <th>호수</th>
-                                                    <th>손가락 둘레</th>
-                                                    <th>반지 안지름</th>
+                                                    <th>Ring size</th>
+                                                    <th>Circumference</th>
+                                                    <th>Inner diameter</th>
                                                 </tr>
                                                 <tr>
-                                                    <td>9호</td>
+                                                    <td>Size 9</td>
                                                     <td>52mm</td>
                                                     <td>15.8mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>10호</td>
+                                                    <td>Size 10</td>
                                                     <td>53mm</td>
                                                     <td>16.0mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>11호</td>
+                                                    <td>Size 11</td>
                                                     <td>54mm</td>
                                                     <td>16.4mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>12호</td>
+                                                    <td>Size 12</td>
                                                     <td>55mm</td>
                                                     <td>16.6mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>13호</td>
+                                                    <td>Size 13</td>
                                                     <td>56mm</td>
                                                     <td>17.0mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>14호</td>
+                                                    <td>Size 14</td>
                                                     <td>57mm</td>
                                                     <td>17.2mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>15호</td>
+                                                    <td>Size 15</td>
                                                     <td>58mm</td>
                                                     <td>17.7mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>16호</td>
+                                                    <td>Size 16</td>
                                                     <td>59mm</td>
                                                     <td>18.0mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>17호</td>
+                                                    <td>Size 17</td>
                                                     <td>60mm</td>
                                                     <td>18.3mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>18호</td>
+                                                    <td>Size 18</td>
                                                     <td>61mm</td>
                                                     <td>18.6mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>19호</td>
+                                                    <td>Size 19</td>
                                                     <td>62mm</td>
                                                     <td>19.0mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>20호</td>
+                                                    <td>Size 20</td>
                                                     <td>63mm</td>
                                                     <td>19.3mm</td>
                                                 </tr>
@@ -372,7 +370,7 @@ export default function Itemdetail(props) {
                                     )}
                                     {view === 'N' && (
                                         <>
-                                            <td><img src="../images/Nsize.jpg" alt="목걸이 사이즈 사진" style={{height:"800px"}}/></td>
+                                            <td><img src="../images/Nsize.jpg" alt="Necklace size" style={{height:"800px"}}/></td>
                                         </>
                                     )}
                                 </tr>
@@ -384,10 +382,10 @@ export default function Itemdetail(props) {
                 </td>
             </table><br />
             <div>
-                {/*상품이미지*/}
+                {/*product image*/}
             </div>
             <div>
-                {/*리뷰*/}
+                {/*review*/}
             </div>
             <div>
                 {/*QnA*/}

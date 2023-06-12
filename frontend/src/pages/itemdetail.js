@@ -54,7 +54,7 @@ export default function Itemdetail(props) {
                 <td style={{ textAlign: 'left', verticalAlign: 'top', padding: '20px' }}>
                     {/*상품정보 구간*/}
                     <b style={{ fontSize: '20px' }}>{product}</b><br /><br />
-                    <b>상품 설명{/*상품정보 구간*/}</b><br /><br />
+                    <b>Product Explanation{/*상품정보 구간*/}</b><br /><br />
                     <p style={{ fontSize: '14px' }}>$1{/*상품정보 구간*/}</p>
                     <table style={{ width: '100%' }}>{/*상품정보 구간*/}
                         <tr>
@@ -127,74 +127,74 @@ export default function Itemdetail(props) {
                                 </tr>
                                 <tr>
                                 <div>
-                                    <button onClick={() => {setView('R')}}>반지 사이즈 보기</button>
-                                    <button onClick={() => {setView('N')}}>목걸이 사이즈 보기</button>
+                                    <button onClick={() => {setView('R')}}>Ring Size</button>
+                                    <button onClick={() => {setView('N')}}>Necklace Size</button>
                                 </div>
                                 {view === 'R' && (
                                         <>
                                             <table style={{width:"100%", height:"600px"}}> 
-                                                <tr>
-                                                    <th>호수</th>
-                                                    <th>손가락 둘레</th>
-                                                    <th>반지 안지름</th>
+                                            <tr>
+                                                    <th>Ring size</th>
+                                                    <th>Circumference</th>
+                                                    <th>Inner diameter</th>
                                                 </tr>
                                                 <tr>
-                                                    <td>9호</td>
+                                                    <td>Size 9</td>
                                                     <td>52mm</td>
                                                     <td>15.8mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>10호</td>
+                                                    <td>Size 10</td>
                                                     <td>53mm</td>
                                                     <td>16.0mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>11호</td>
+                                                    <td>Size 11</td>
                                                     <td>54mm</td>
                                                     <td>16.4mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>12호</td>
+                                                    <td>Size 12</td>
                                                     <td>55mm</td>
                                                     <td>16.6mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>13호</td>
+                                                    <td>Size 13</td>
                                                     <td>56mm</td>
                                                     <td>17.0mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>14호</td>
+                                                    <td>Size 14</td>
                                                     <td>57mm</td>
                                                     <td>17.2mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>15호</td>
+                                                    <td>Size 15</td>
                                                     <td>58mm</td>
                                                     <td>17.7mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>16호</td>
+                                                    <td>Size 16</td>
                                                     <td>59mm</td>
                                                     <td>18.0mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>17호</td>
+                                                    <td>Size 17</td>
                                                     <td>60mm</td>
                                                     <td>18.3mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>18호</td>
+                                                    <td>Size 18</td>
                                                     <td>61mm</td>
                                                     <td>18.6mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>19호</td>
+                                                    <td>Size 19</td>
                                                     <td>62mm</td>
                                                     <td>19.0mm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>20호</td>
+                                                    <td>Size 20</td>
                                                     <td>63mm</td>
                                                     <td>19.3mm</td>
                                                 </tr>
@@ -203,7 +203,7 @@ export default function Itemdetail(props) {
                                     )}
                                     {view === 'N' && (
                                         <>
-                                            <td><img src="../images/Nsize.jpg" alt="목걸이 사이즈 사진" style={{height:"800px"}}/></td>
+                                            <td><img src="../images/Nsize.jpg" alt="Necklace Size" style={{height:"800px"}}/></td>
                                         </>
                                     )}
                                 </tr>
