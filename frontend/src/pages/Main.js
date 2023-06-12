@@ -75,11 +75,11 @@ function Divslider() {
             transition: "opacity 0.9s",
             opacity: isVisible1 ? 1 : 0,
           }}>
-            Elegance and grace,
+            Elevate your everyday style 
             <br />
-            captured in a precious ring.
+            with our affordable yet chic
             <br />
-            With ***.
+            65 Ring
           </p>
         </div>
         <div
@@ -92,11 +92,11 @@ function Divslider() {
             transition: "opacity 0.9s",
             opacity: isVisible2 ? 1 : 0,
           }}>
-            Embrace your beauty 
+            Indulge in the luxury of
             <br />
-            with a stunning necklace.
+            65
             <br />
-            It's in the ***
+            handcrafted necklace accessories
           </p>
         </div>
       </div>

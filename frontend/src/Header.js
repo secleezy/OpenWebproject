@@ -36,9 +36,9 @@ const [scrollPosition, setScrollPosition] = useState(0);
             modules={[Autoplay, Navigation]}
             className="mySwiper"
             >
-            <SwiperSlide>3만원 이상 구매시 무료배송</SwiperSlide>
-            <SwiperSlide>가입시 첫구매 지원금 3,000원 적립</SwiperSlide>
-            <SwiperSlide>사이트 오픈 이벤트 사은품 증정</SwiperSlide>
+            <SwiperSlide>Free delivery for purchases over KRW 30,000</SwiperSlide>
+            <SwiperSlide>Earns 3,000 won in support for first purchase</SwiperSlide>
+            <SwiperSlide>Site Open Event Gift</SwiperSlide>
             </Swiper>
             {/* 글자가 움직여요! */}
             </div>

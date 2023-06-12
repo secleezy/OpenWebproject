@@ -26,15 +26,50 @@ export default function Community() {
                     </tr>
 
                     <tr style={{ height: '40px' }}>
-                        <td style={{ width: '150px' }}><Link to='/login'>1</Link></td>
-                        <td style={{ width: '700px' }}>hi</td>
-                        <td style={{ width: '150px' }}>jiyeon</td>
+                        <td style={{ width: '150px' }}>1</td>
+                        <td style={{ width: '700px' }}><b>Precautions before ordering a necklace or ring</b></td>
+                        <td style={{ width: '150px' }}>Admin</td>
                         <td style={{ width: '150px' }}>230601</td>
                     </tr>
 
 
+                    <tr style={{ height: '40px' }}>
+                        <td style={{borderBottom: '1px solid gray'}}></td>
+                        <td colSpan="2" style={{ width: '850px', borderBottom: '1px solid gray', padding: '30px', textAlign:'left'}}>
+                        Accurate Sizing: Pay careful attention to sizing guidelines provided by the seller. Rings and necklaces should fit comfortably, so it's crucial to measure your finger or neck accurately. Consider using a sizing chart or seeking professional assistance if needed.
+                        <br/><br/>
+                        Material and Allergies: Take note of the material composition of the jewelry. Some individuals may have allergies or sensitivities to certain metals or materials. Ensure
+                        </td>
+                        <td style={{borderBottom: '1px solid gray'}}></td>
+                    </tr>
+
+                    <tr style={{ height: '40px' }}>
+                        <td style={{ width: '150px' }}>2</td>
+                        <td style={{ width: '700px' }}><b>Shipping precautions</b></td>
+                        <td style={{ width: '150px' }}>Admin</td>
+                        <td style={{ width: '150px' }}>230612</td>
+                    </tr>
 
 
+                    <tr style={{ height: '40px' }}>
+                        <td style={{borderBottom: '1px solid gray'}}></td>
+                        <td colSpan="2" style={{ width: '850px', borderBottom: '1px solid gray', padding: '30px', textAlign:'left'}}>
+                        Reliable Shipping Provider: Choose a reputable shipping provider known for handling delicate items with care. Look for options that offer tracking and insurance to ensure the safe delivery of your jewelry.
+                        <br/><br/>
+                        Packaging: Ensure that the jewelry is properly packaged to prevent damage during transit. The packaging should be secure, protective, and designed to keep the jewelry in place.
+                        <br/><br/>
+                        Shipping Insurance: Consider opting for shipping insurance to protect your investment. This will provide coverage in case of loss, theft, or damage during transit. Check with the seller or shipping provider for insurance options and associated costs.
+                        <br/><br/>
+                        Delivery Address: Provide a correct and complete delivery address to avoid any delivery issues. Double-check the accuracy of the address, including any unit numbers or specific instructions, to ensure that the package reaches you without any problems.
+                        <br/><br/>
+                        Signature Confirmation: If the jewelry is valuable or requires a signature upon delivery, consider requesting signature confirmation. This ensures that the package is handed directly to you or an authorized recipient, reducing the risk of theft or loss.
+                        <br/><br/>
+                        Delivery Tracking: Opt for a shipping method that provides tracking information. This allows you to monitor the progress of your package and stay informed about its estimated delivery date. Tracking helps you be prepared to receive the jewelry and minimizes the risk of it being left unattended.
+                        <br/><br/>
+                        Customs and Import Regulations: If you are ordering jewelry from another country, be aware of any customs duties, taxes, or import regulations that may apply. Research the rules and regulations of your country to avoid any surprises or delays in receiving your package.
+                        </td><br/>
+                        <td style={{borderBottom: '1px solid gray'}}></td>
+                    </tr>
 
 
                 </table>
