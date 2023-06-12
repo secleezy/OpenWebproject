@@ -15,7 +15,7 @@ export default function Community_qna() {
                     <td style={{ width: '200px' }}><Link to='/community'>Notice</Link></td>
                     <td style={{ width: '200px' }}><Link to='/community_qna' style={{ color: "#000033" }}>QnA</Link></td>
                 </table>
-                <table class="killmyself" style={{ width: '60%', display: 'inline-block' }}>
+                <table style={{ width: '60%', display: 'inline-block' }}>
                     <tr style={{ borderTop: '1px solid gray', borderBottom: '1px solid gray', height: '40px', fontWeight: '800' }}>
                         <td style={{ width: '150px' }}>NO</td>
                         <td style={{ width: '700px' }}>SUBJECT</td>
@@ -24,10 +24,7 @@ export default function Community_qna() {
                     </tr>
 
                     <tr style={{ height: '40px' }}>
-                        <td style={{ width: '150px' }}><Link to='/login'>1</Link></td>
-                        <td style={{ width: '700px' }}>hi it's qnas</td>
-                        <td style={{ width: '150px' }}>jiyeon</td>
-                        <td style={{ width: '150px' }}>230601</td>
+                        <td colSpan={4} style={{ width: '1150px', paddingTop:'30px'}}>No search results found.</td>
                     </tr>
 
 

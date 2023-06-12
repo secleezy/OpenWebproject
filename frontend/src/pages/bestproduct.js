@@ -1,12 +1,13 @@
 import "./UserInterface.css"; //내가만든 css 가져오기
 import { Link } from "react-router-dom";
 import React, { useState } from 'react'; //리액트 동적변수 사용
+import { useCookies } from "react-cookie";
 export default function Customs() {
     const [isCheck, setCheck] = useState(true);
     const [isCheck2, setCheck2] = useState(false);
     const [isCheck3, setCheck3] = useState(false);
 
-
+    const [cookies, setCookie, removeCookie] = useCookies(['itemcookie']);
 
 
     //ring or necklace
@@ -58,12 +59,15 @@ export default function Customs() {
     }
 
     const buynow = () => {
-        //함수구현
+        alert("Your purchase has been completed. Thank you.");
     }
 
     const addcart = () => {
-        //함수구현
+        var code=Math.floor(Math.random() * (99 - 11) + 11);
+        setCookie("customproduct"+code, true, { path: '/', maxAge: 3600 });
+        alert("Product code = " + code + ", It has been added to your shopping cart.");
     }
+
 
     const wishlist = () => {
         //함수구현
@@ -79,11 +83,11 @@ export default function Customs() {
                     {/*image area*/}
                     <img src="images/custom/pic3.png" alt = "sample image_custom" style={{ width: '450px', height: '650px' }}></img>
                 </td>
-                <td style={{ textAlign: 'left', verticalAlign: 'top', padding: '20px' }}>
+                <td style={{ textAlign: 'left', verticalAlign: 'top', padding: '20px' , width:'425px'}}>
                     {/*product info. area*/}
                     <b style={{ fontSize: '20px' }}>Own Custom Product</b><br /><br />
-                    <b>Product Explanation{/*상품 정보*/}</b><br /><br />
-                    <p style={{ fontSize: '14px' }}>$1{/*product info.*/}</p>
+                    <b>Indulge in the ultimate personalized luxury with our custom jewelry. {/*상품 정보*/}</b><br /><br />
+                    <p style={{ fontSize: '14px' }}>97,000 won{/*product info.*/}</p>
                     <table style={{ width: '100%' }}>{/*product info.*/}
                         <tr>
                             <td class="col-sm-4">
@@ -250,19 +254,23 @@ export default function Customs() {
                     </b><br /><br />
                     <button class="black_button" onClick={buynow}>BUY NOW</button>
                     <button class="white_button" onClick={addcart}>ADD CART</button>
-                    <button class="white_button" onClick={wishlist}>WISH LIST</button>
+
                     <hr></hr>
 
                     <b style={{ cursor: 'pointer' }} onClick={() => { setCheck((e) => !e); setCheck2(false); }}>PRODUCT INFO</b><br />
                     {(isCheck &&
-                        <div class="detailshopping" style={{ height: '200px' }}>
-                            <h6>Necklace</h6>
-                            <p>Size : Free(35~65cm)</p>
-                            <p>Weight : ??g~??g</p>
-                            <h6>Ring</h6>
-                            <p>Size : Free</p>
-                            <p>Weight : ??g~??g</p>
-                        </div>)
+                        <div class="detailshopping" style={{ height: '200px',  width:'380px', overflowY: 'scroll', }}>
+Experience the epitome of personalization and craftsmanship with our exquisite custom jewelry collection. We believe that jewelry should be an extension of your personality, a reflection of your journey and cherished moments. That's why we offer the opportunity to create a truly one-of-a-kind piece that is tailored to your unique vision.
+
+Our custom jewelry is meticulously crafted by our skilled artisans who take immense pride in their craft. From engagement rings and wedding bands to pendants, bracelets, and earrings, every detail is thoughtfully considered and expertly executed. We work closely with you throughout the design process, ensuring that your desires and inspirations are seamlessly translated into a stunning work of art.
+
+Choose from an array of precious metals, gemstones, and design elements to bring your vision to life. Whether you desire a classic and timeless design or a contemporary and bold statement piece, our artisans will skillfully transform your ideas into reality. From intricate engravings and personalized messages to birthstones and symbolic motifs, each custom jewelry piece holds deep meaning and sentimental value.
+
+Our commitment to quality is unwavering. We source only the finest materials, ensuring that your custom jewelry is crafted with the utmost attention to detail and durability. Our artisans employ time-honored techniques and the latest technology to create a masterpiece that will stand the test of time.
+
+When you choose our custom jewelry, you embark on a collaborative journey, co-creating a piece that speaks to your soul and captures the essence of your unique story. Whether it's a cherished gift for a loved one or a personal indulgence, our custom jewelry is an heirloom in the making, a symbol of love, celebration, and personal expression that will be treasured for generations to come.
+                        </div>
+                        )
                         ||
                         <div class="detailshopping" style={{ height: '0px' }}>
                         </div>
@@ -271,10 +279,10 @@ export default function Customs() {
 
                     <b style={{ cursor: 'pointer' }} onClick={() => { setCheck2((e) => !e); setCheck(false); }}>SHOPPING INFO</b><br />
                     {(isCheck2 &&
-                        <div class="detailshopping" style={{ height: '100px' }}>
-                            {/*product explan*/}
-                            ad
-                        </div>)
+                        <div class="detailshopping" style={{ height: '200px',  width:'380px', overflowY: 'scroll', }}>
+                        To ensure smooth delivery, please double-check and provide an accurate shipping address during checkout. Any errors or incomplete information may lead to delays or unsuccessful delivery attempts. If you need to make changes to the shipping address after placing your order, please contact our customer support as soon as possible.
+                        </div>
+                        )
                         ||
                         <div class="detailshopping" style={{ height: '0px' }}>
                         </div>

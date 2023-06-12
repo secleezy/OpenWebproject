@@ -2,10 +2,16 @@ import "./UserInterface.css"; //내가만든 css 가져오기
 import { useNavigate, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react'; //리액트 동적변수 사용
+import { useCookies } from "react-cookie";
 
 export default function Itemdetail(props) {
     const product = useLocation().state.category;
+    const id = useLocation().state.id;
+    const productprice = useLocation().state.productprice;
+    const miniproductdescription = useLocation().state.miniproductdescription;
+    const productscription = useLocation().state.productscription;
     const imgRoute = useLocation().state.imgRoute;
+    const [cookies, setCookie, removeCookie] = useCookies(['itemcookie']);
     console.log(product);
 
     const [isCheck, setCheck] = useState(true);
@@ -24,11 +30,12 @@ export default function Itemdetail(props) {
     }
 
     const buynow = () => {
-        alert("구매가 완료되었습니다.")
+        alert("Your purchase has been completed. Thank you.");
     }
 
     const addcart = () => {
-        //함수구현
+        setCookie("item_"+id, true, { path: '/', maxAge: 3600 });
+        alert("It has been added to your shopping cart.");
     }
 
 
@@ -47,11 +54,11 @@ export default function Itemdetail(props) {
                     {/*이미지 구간*/}
                     <img src={imgRoute} style={{ width: '450px', height: '650px' }}></img>
                 </td>
-                <td style={{ textAlign: 'left', verticalAlign: 'top', padding: '20px' }}>
+                <td style={{ textAlign: 'left', verticalAlign: 'top', padding: '20px' , width:'425px'}}>
                     {/*상품정보 구간*/}
                     <b style={{ fontSize: '20px' }}>{product}</b><br /><br />
-                    <b>Product Explanation{/*상품정보 구간*/}</b><br /><br />
-                    <p style={{ fontSize: '14px' }}>$1{/*상품정보 구간*/}</p>
+                    <b>{miniproductdescription}</b><br /><br />
+                    <p style={{ fontSize: '14px' }}>{productprice}</p>
                     <table style={{ width: '100%' }}>{/*상품정보 구간*/}
                         <tr>
                             <td>
@@ -60,7 +67,10 @@ export default function Itemdetail(props) {
                             <td>
                                 <select class="select" title="컬러 선택" style={{ width: '100%', textAlign: 'center' }} value={color} onChange={colorChange}>
                                     <option value="">-select-</option>
-                                    <option value="red">red</option>
+                                    <option value="red">silver</option>
+                                    <option value="red">gold</option>
+                                    <option value="red">rose gold</option>
+                                    <option value="red">white gold</option>
                                 </select>
                             </td>
                         </tr>
@@ -81,18 +91,18 @@ export default function Itemdetail(props) {
                         {/*상품 선택칸*/}
                     </div>
                     <b>
-                        TOTAL : ${ } ({ } item(s))
+                        TOTAL : {productprice} (1 item(s))
                     </b><br /><br />
                     <button class="black_button" onClick={buynow}>BUY NOW</button>
                     <button class="white_button" onClick={addcart}>ADD CART</button>
-                    <button class="white_button"> WISH LIST</button>
                     <hr></hr>
 
                     <b style={{ cursor: 'pointer' }} onClick={() => { setCheck((e) => !e); setCheck2(false); }}>PRODUCT INFO</b><br />
                     {isCheck &&
-                        <div class="detailshopping" style={{ height: '100px' }}>
-                            {/*상품 설명칸*/}
-                            ad
+
+                        <div class="detailshopping" style={{ height: '200px',  width:'380px', overflowY: 'scroll', }}>
+                            {productscription}
+                            
                         </div>
                         ||
                         <div class="detailshopping" style={{ height: '0px' }}>
@@ -102,10 +112,9 @@ export default function Itemdetail(props) {
 
                     <b style={{ cursor: 'pointer' }} onClick={() => { setCheck2((e) => !e); setCheck(false); }}>SHOPPING INFO</b><br />
                     {isCheck2 &&
-                        <div class="detailshopping" style={{ height: '100px' }}>
-                            {/*상품 설명칸*/}
-                            ad
-                        </div>
+                        <div class="detailshopping" style={{ height: '200px',  width:'380px', overflowY: 'scroll', }}>
+                        To ensure smooth delivery, please double-check and provide an accurate shipping address during checkout. Any errors or incomplete information may lead to delays or unsuccessful delivery attempts. If you need to make changes to the shipping address after placing your order, please contact our customer support as soon as possible.
+                    </div>
                         ||
                         <div class="detailshopping" style={{ height: '0px' }}>
                         </div>
@@ -126,9 +135,11 @@ export default function Itemdetail(props) {
                                         <button onClick={() => { setView('R') }}>Ring Size</button>
                                         <button onClick={() => { setView('N') }}>Necklace Size</button>
                                     </div>
-                                    {view === 'R' && (
+                                </tr>
+                                    <tr>
+                                {view === 'R' && (
                                         <>
-                                            <table style={{ width: "100%", height: "600px" }}>
+                                            <table style={{width:"100%", height:"600px"}}> 
                                                 <tr>
                                                     <th>Ring size</th>
                                                     <th>Circumference</th>
@@ -199,7 +210,7 @@ export default function Itemdetail(props) {
                                     )}
                                     {view === 'N' && (
                                         <>
-                                            <td><img src="../images/Nsize.jpg" alt="Necklace Size" style={{ height: "800px" }} /></td>
+                                            <td><img src="../images/Nsize.jpg" alt="Necklace size" style={{height:"800px"}}/></td>
                                         </>
                                     )}
                                 </tr>

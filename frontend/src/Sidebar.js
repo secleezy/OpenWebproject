@@ -10,7 +10,7 @@ function Sidebar() {
 const [isCheck, setCheck] = useState(false);
 
   const menus = [
-    { name: "메인", path: "/" },
+    { name: "MAIN", path: "/" },
     { name: "ALL", path: "/all" },
     { name: "CUSTOM PRODUCT", path: "/bestproduct" },
 
