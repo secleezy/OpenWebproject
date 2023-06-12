@@ -18,7 +18,7 @@ const [isCheck, setCheck] = useState(false);
     { name: "JOIN", path: "/join" },
     { name: "MY PAGE", path: "/mypage" },
     { name: "ABOUT US", path: "/aboutus" },
-    { name: "STOCK LIST", path: "/stocklist" },
+    { name: "CART", path: "/stocklist" },
     { name: "COMMUNITY", path: "/community" }
   ];
 
