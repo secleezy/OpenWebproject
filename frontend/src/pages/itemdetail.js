@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react'; //리액트 동적변수 사
 
 export default function Itemdetail(props) {
     const product = useLocation().state.category;
-    let { id, name, category, imgRoute } = product || {};
+    const imgRoute = useLocation().state.imgRoute;
     console.log(product);
 
     const [isCheck, setCheck] = useState(true);
@@ -24,22 +24,18 @@ export default function Itemdetail(props) {
     }
 
     const buynow = () => {
-        //함수구현
+        alert("구매가 완료되었습니다.")
     }
 
     const addcart = () => {
         //함수구현
     }
 
-    const wishlist = () => {
-        //함수구현
-    }
-    
 
     const location = useLocation();
     useEffect(() => {
         console.log(location);
-      }, [ location ]);
+    }, [location]);
 
     return (
         <div style={{ textAlign: 'center' }}>
@@ -89,7 +85,7 @@ export default function Itemdetail(props) {
                     </b><br /><br />
                     <button class="black_button" onClick={buynow}>BUY NOW</button>
                     <button class="white_button" onClick={addcart}>ADD CART</button>
-                    <button class="white_button" onClick={wishlist}>WISH LIST</button>
+                    <button class="white_button"> WISH LIST</button>
                     <hr></hr>
 
                     <b style={{ cursor: 'pointer' }} onClick={() => { setCheck((e) => !e); setCheck2(false); }}>PRODUCT INFO</b><br />
@@ -126,14 +122,14 @@ export default function Itemdetail(props) {
                                     <td></td>
                                 </tr>
                                 <tr>
-                                <div>
-                                    <button onClick={() => {setView('R')}}>Ring Size</button>
-                                    <button onClick={() => {setView('N')}}>Necklace Size</button>
-                                </div>
-                                {view === 'R' && (
+                                    <div>
+                                        <button onClick={() => { setView('R') }}>Ring Size</button>
+                                        <button onClick={() => { setView('N') }}>Necklace Size</button>
+                                    </div>
+                                    {view === 'R' && (
                                         <>
-                                            <table style={{width:"100%", height:"600px"}}> 
-                                            <tr>
+                                            <table style={{ width: "100%", height: "600px" }}>
+                                                <tr>
                                                     <th>Ring size</th>
                                                     <th>Circumference</th>
                                                     <th>Inner diameter</th>
@@ -203,7 +199,7 @@ export default function Itemdetail(props) {
                                     )}
                                     {view === 'N' && (
                                         <>
-                                            <td><img src="../images/Nsize.jpg" alt="Necklace Size" style={{height:"800px"}}/></td>
+                                            <td><img src="../images/Nsize.jpg" alt="Necklace Size" style={{ height: "800px" }} /></td>
                                         </>
                                     )}
                                 </tr>
