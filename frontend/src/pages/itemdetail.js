@@ -221,8 +221,56 @@ export default function Itemdetail(props) {
 
                 </td>
             </table><br />
-            <div>
-                {/*상품이미지*/}
+            <div class="detailimg">
+            {product=='bless' && 
+            <>
+                <div style={{width:'877px', display:'inline-block'}}>
+                <img src="images/item/bless/1.png" alt="1번"></img>
+                <img src="images/item/bless/2.png"></img>
+                <img src="images/item/bless/3.png"></img>
+                <img src="images/item/bless/4.png"></img>
+                <img src="images/item/bless/5.png"></img>
+                <img src="images/item/bless/6.png"></img>
+                <img src="images/item/bless/7.png"></img>
+                <img src="images/item/bless/8.png"></img>
+                </div>
+            </>
+            }
+
+            {product=='dream' && 
+            <>
+                <div style={{width:'877px', display:'inline-block'}}>
+                <img src="images/item/dream/1.png" alt="1번"></img>
+                <img src="images/item/dream/2.png"></img>
+                <img src="images/item/dream/3.png"></img>
+                <img src="images/item/dream/4.png"></img>
+                <img src="images/item/dream/5.png"></img>
+                <img src="images/item/dream/6.png"></img>
+                <img src="images/item/dream/7.png"></img>
+                <img src="images/item/dream/8.png"></img>
+                </div>
+            </>
+            }
+            
+            {product=='cupid' && 
+            <>
+                <div style={{width:'877px', display:'inline-block'}}>
+                <img  style={{width:'877px', display:'inline-block'}} src="images/item/cupid/1.png" alt="1번"></img>
+                <img  style={{width:'877px', display:'inline-block'}} src="images/item/cupid/2.jpg"></img>
+                <img  style={{width:'877px', display:'inline-block'}} src="images/item/cupid/3.jpg"></img>
+                <img  style={{width:'877px', display:'inline-block'}} src="images/item/cupid/4.jpg"></img>
+                <img  style={{width:'877px', display:'inline-block'}} src="images/item/cupid/5.jpg"></img>
+                <img  style={{width:'877px', display:'inline-block'}} src="images/item/cupid/6.jpg"></img>
+                <img  style={{width:'877px', display:'inline-block'}} src="images/item/cupid/7.jpg"></img>
+                <img  style={{width:'877px', display:'inline-block'}} src="images/item/cupid/8.jpg"></img>
+                <img  style={{width:'877px', display:'inline-block'}} src="images/item/cupid/9.jpg"></img>
+                <img  style={{width:'877px', display:'inline-block'}} src="images/item/cupid/10.jpg"></img>
+                <img  style={{width:'877px', display:'inline-block'}} src="images/item/cupid/11.jpg"></img>
+                </div>
+            </>
+            }
+            
+            
             </div>
             <div>
                 {/*리뷰*/}

@@ -2,6 +2,7 @@ import "./UserInterface.css"; //내가만든 css 가져오기
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from "react-router-dom";
 
 export default function Aboutus() {
     useEffect(() => {
@@ -45,7 +46,9 @@ export default function Aboutus() {
   ];
     return (
         <div className="About-div">
-            <h1>ABOUT US</h1>
+            <Link to='/'><img src="images/logo.png" alt="BigCo Inc. logo" style={{ width: '200px', margin: '30px', marginBottom: '40px' }} /></Link>
+            <br />
+            <b>About Us</b><br />
             <div class="empty"></div>
             <div class="container-fluid ab-1">
                 <h1 class="ab-titles">Develop Team Introduction</h1>

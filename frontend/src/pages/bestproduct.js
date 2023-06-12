@@ -250,7 +250,7 @@ export default function Customs() {
                         {/*Product Selecting*/}
                     </div>
                     <b>
-                        TOTAL : ${ } ({ } item(s))
+                        TOTAL : 97,000 won (1 item(s))
                     </b><br /><br />
                     <button class="black_button" onClick={buynow}>BUY NOW</button>
                     <button class="white_button" onClick={addcart}>ADD CART</button>

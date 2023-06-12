@@ -245,7 +245,7 @@ export default function Join() {
                             <input type="text" value={name} onChange={onnameChange} maxlength='16'></input><br /><br />
 
                             <b>EMAIL <sub style={{ color: 'Blue', fontSize: '12px', verticalAlign: 'middle' }}>*</sub></b><br />
-                            <input type="text" style={{ width: '40%' }} value={email} onChange={onemailChange} maxlength='15'></input>　@
+                            <input type="text" style={{ width: '40%' }} value={email} onChange={onemailChange} maxlength='15'></input>　@　
                             <select class="select" title="이메일 도메인 주소 선택" style={{ width: '40%' }} value={emaildomain} onChange={onemaildomailChange}>
                                 <option value="">-select-</option>
                                 <option value="naver.com">naver.com</option>
