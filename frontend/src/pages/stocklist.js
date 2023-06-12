@@ -91,7 +91,7 @@ export default function Stocklist() {
                         </td>
                         <td style={{ width: '600px',  textAlign:'left', paddingLeft:'20px'}}>{products[0].category}</td>
                         <td style={{ width: '180px' }}>1</td>
-                        <td style={{ width: '130px' }}>38,000원</td>
+                        <td style={{ width: '130px' }}>38,000won</td>
                         <td style={{ width: '130px' }}><p style={{cursor:'pointer', marginTop:'10px'}} onClick={()=>{setCookie("item_1", false, { path: '/', maxAge: 3600  });
                             window.location.replace("/stocklist");
                             alert("It has been deleted.");}}>DEL</p></td>
@@ -104,7 +104,7 @@ export default function Stocklist() {
                         </td>
                         <td style={{ width: '600px',  textAlign:'left', paddingLeft:'20px'}}>{products[1].category}</td>
                         <td style={{ width: '180px' }}>1</td>
-                        <td style={{ width: '130px' }}>38,000원</td>
+                        <td style={{ width: '130px' }}>38,000won</td>
                         <td style={{ width: '130px' }}><p style={{cursor:'pointer', marginTop:'10px'}} onClick={()=>{setCookie("item_2", false, { path: '/', maxAge: 3600  });
                             window.location.replace("/stocklist");
                             alert("It has been deleted.");}}>DEL</p></td>
@@ -117,7 +117,7 @@ export default function Stocklist() {
                         </td>
                         <td style={{ width: '600px',  textAlign:'left', paddingLeft:'20px'}}>{products[2].category}</td>
                         <td style={{ width: '180px' }}>1</td>
-                        <td style={{ width: '130px' }}>85,000원</td>
+                        <td style={{ width: '130px' }}>85,000won</td>
                         <td style={{ width: '130px' }}><p style={{cursor:'pointer', marginTop:'10px'}} onClick={()=>{setCookie("item_3", false, { path: '/', maxAge: 3600  });
                             window.location.replace("/stocklist");
                             alert("It has been deleted.");}}>DEL</p></td>
@@ -130,7 +130,7 @@ export default function Stocklist() {
                         </td>
                         <td style={{ width: '600px',  textAlign:'left', paddingLeft:'20px'}}>{products[3].category}</td>
                         <td style={{ width: '180px' }}>1</td>
-                        <td style={{ width: '130px' }}>26,000원</td>
+                        <td style={{ width: '130px' }}>26,000won</td>
                         <td style={{ width: '130px' }}><p style={{cursor:'pointer', marginTop:'10px'}} onClick={()=>{setCookie("item_4", false, { path: '/', maxAge: 3600  });
                             window.location.replace("/stocklist");
                             alert("It has been deleted.");}}>DEL</p></td>
@@ -143,7 +143,7 @@ export default function Stocklist() {
                         </td>
                         <td style={{ width: '600px',  textAlign:'left', paddingLeft:'20px'}}>{products[4].category}</td>
                         <td style={{ width: '180px' }}>1</td>
-                        <td style={{ width: '130px' }}>52,900원</td>
+                        <td style={{ width: '130px' }}>52,900won</td>
                         <td style={{ width: '130px' }}><p style={{cursor:'pointer', marginTop:'10px'}} onClick={()=>{
                             setCookie("item_5", false, { path: '/', maxAge: 3600  });
                             window.location.replace("/stocklist");
