@@ -77,7 +77,7 @@ export default function Customs() {
             <table style={{ display: 'inline-block' }}>
                 <td>
                     {/*image area*/}
-                    <img src="" alt = "sample image_custom" style={{ width: '450px', height: '650px' }}></img>
+                    <img src="images/custom/pic3.png" alt = "sample image_custom" style={{ width: '450px', height: '650px' }}></img>
                 </td>
                 <td style={{ textAlign: 'left', verticalAlign: 'top', padding: '20px' }}>
                     {/*product info. area*/}
