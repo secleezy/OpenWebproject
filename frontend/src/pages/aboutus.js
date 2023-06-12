@@ -51,9 +51,9 @@ export default function Aboutus() {
                 <hr class="ab-hr" />
                 <img class="col-sm-3" src="images/aboutUs_pic.png" alt="aboutUS" />
                 <div class="col-sm-7 ab-intro">
-                    <p>우리 팀은 지연, 범순, 정윤 이상 3명의 팀원으로 구성되어있습니다.</p>
-                    <p>우리는 충북대학교 전자정보대학 소프트웨어학과의 <b>오픈소스 웹 소프트웨어</b>과목의 프로젝트로 이 웹사이트를 제작하였습니다.</p>
-                    <p>스크롤을 내려 그들이 각자 맡았던 역할과 업무를 확인할 수 있습니다. 또한 깃허브 아이콘을 클릭하여 우리의 github Repository 링크를 방문하여 프로젝트를 확인할 수 있습니다.</p>
+                    <p>Our team consists of three members, Jiyeon, Bumsoon, and Jungyoon.</p>
+                    <p>We create this website as a project of <b>Opensource Web Software</b>of the Department of Software at Chungbuk National University's Colleague of Electronical Computer Engineering.</p>
+                    <p>You can scroll down to see their roles and tasks. And to click Github icon, You can visit our team git repo., and check our Project.</p>
                 </div>
             </div>
             <div class="ab-main">
