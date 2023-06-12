@@ -1,7 +1,7 @@
 import React from 'react';
 import "./UserInterface.css"; // Import your CSS
 import { Link } from "react-router-dom";
-import { useState } from 'react'; //Î¶¨Ïï°Ìä∏ ÎèôÏ†ÅÎ≥ÄÏàò ÏÇ¨Ïö©
+import { useState } from 'react'; //Î¶¨Ïï°?ä∏ ?èô?†ÅÎ≥??àò ?Ç¨?ö©
 import { useCookies } from "react-cookie";
 
 export default function All() {
@@ -14,31 +14,31 @@ export default function All() {
             id: 1,
             name: "product1",
             category: "bless",
-            price: "38,000Ïõê"
+            price: "38,000won"
         },
         {
             id: 2,
             name: "product2",
             category: "dream",
-            price: "38,000Ïõê"
+            price: "38,000won"
         },
         {
             id: 3,
             name: "product3",
             category: "cupid",
-            price: "85,000Ïõê"
+            price: "85,000won"
         },
         {
             id: 4,
             name: "product4",
             category: "conch",
-            price: "26,000Ïõê"
+            price: "26,000won"
         },
         {
             id: 5,
             name: "product5",
             category: "flog",
-            price: "52,900Ïõê"
+            price: "52,900won"
         }
 
     ];

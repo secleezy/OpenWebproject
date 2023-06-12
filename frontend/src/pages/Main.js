@@ -1,10 +1,10 @@
 import "./UserInterface.css"; //내가만든 css 가져오기
 import { Link } from 'react-router-dom';
-import { Paper, Button } from '@mui/material';
+import { Paper } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function All() {
   return (
@@ -58,8 +58,8 @@ function Divslider() {
   const [isVisible2, setVisible2] = useState(false);
   return (
     <div className="container">
-        <img className = "imgLogo iL1" src="images/main-slide/R.png" />
-        <img className = "imgLogo iL2" src="images/main-slide/N.png" />
+        <img className = "imgLogo iL1" src="images/main-slide/R.png" alt=""/>
+        <img className = "imgLogo iL2" src="images/main-slide/N.png" alt=""/>
       <div
         className="left-hovered right-hovered"
       >
@@ -75,11 +75,11 @@ function Divslider() {
             transition: "opacity 0.9s",
             opacity: isVisible1 ? 1 : 0,
           }}>
-            **의 반지와 함께,
+            Elegance and grace,
             <br />
-            마음껏 바라고, 꿈을 펼쳐라.
+            captured in a precious ring.
             <br />
-            이제 당신의 길을 걸어나가라.
+            With ***.
           </p>
         </div>
         <div
@@ -92,11 +92,11 @@ function Divslider() {
             transition: "opacity 0.9s",
             opacity: isVisible2 ? 1 : 0,
           }}>
-            당신의 아름다움을 한층 빛내줄
+            Embrace your beauty 
             <br />
-            자신감 있게, **과 함께 나아가라.
+            with a stunning necklace.
             <br />
-            세상에 당신을 자랑스럽게 보여라.
+            It's in the ***
           </p>
         </div>
       </div>

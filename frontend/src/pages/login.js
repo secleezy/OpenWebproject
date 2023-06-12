@@ -37,12 +37,12 @@ export function LoginForm() {
                     setCookie('id', id, { path: '/', maxAge: 3600 });
                     navigate('/');
                 } else {
-                    alert('아이디 / 비밀번호를 다시 확인하세요');
+                    alert('Check Your ID / Password');
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('로그인에 실패했습니다');
+                alert('Login Fail');
             });
     };
 
