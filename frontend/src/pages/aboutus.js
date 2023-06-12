@@ -46,13 +46,14 @@ export default function Aboutus() {
     return (
         <div className="About-div">
             <h1>ABOUT US</h1>
+            <div class="empty"></div>
             <div class="container-fluid ab-1">
                 <h1 class="ab-titles">Develop Team Introduction</h1>
                 <hr class="ab-hr" />
                 <img class="col-sm-3" src="images/aboutUs_pic.png" alt="aboutUS" />
                 <div class="col-sm-7 ab-intro">
                     <p>Our team consists of three members, Jiyeon, Bumsoon, and Jungyoon.</p>
-                    <p>We create this website as a project of <b>Opensource Web Software</b>of the Department of Software at Chungbuk National University's Colleague of Electronical Computer Engineering.</p>
+                    <p>We create this website as a project of <b>Opensource Web Software</b> of the Department of Software at Chungbuk National University's Colleague of Electronical Computer Engineering.</p>
                     <p>You can scroll down to see their roles and tasks. And to click Github icon, You can visit our team git repo., and check our Project.</p>
                 </div>
             </div>

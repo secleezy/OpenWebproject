@@ -284,6 +284,9 @@ button {
 }
 
 /* aboutus.js */
+.empty{
+    height: 100px;
+}
 .About-div{
     margin: 300px;
     margin-top: 0px;
@@ -305,7 +308,7 @@ button {
     margin-right: 100px;
 }
 .ab-main{
-    height: 1800px;
+    height: 1600px;
 }
 
 
@@ -344,7 +347,8 @@ button {
 .gitcon{
     text-align: center;
     position: absolute;
-    bottom: -1800px;
+    bottom: -1650px;
+    left: 49%;
 }
 
 
